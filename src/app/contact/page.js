@@ -5,28 +5,28 @@ import { useState } from "react";
 const FAQ_ITEMS = [
   {
     id: 1,
-    question: "Do you sell limited edition prints?",
-    answer: "Yes, all fine art landscape and architectural images are available in numbered limited editions. They are printed on archival museum-grade papers (Hahnemühle Photo Rag) and come with signed certificates of authenticity."
+    question: "What is your typical turnaround time for wedding photos?",
+    answer: "For wedding coverages, we provide a preview highlights gallery within 3 days so you can share memories with family. The complete set of high-resolution retouched digital photos and your premium physical photobook are delivered within 4-6 weeks."
   },
   {
     id: 2,
-    question: "Are you available for international assignments?",
-    answer: "Absolutely. I travel extensively for architectural projects, commercial brand shoots, and editorial portfolios. Please submit an inquiry with your location, scope, and timeline to discuss details."
+    question: "Are you available for photography sessions outside Mawanella?",
+    answer: "Yes! I travel all over Sri Lanka for weddings, wildlife expeditions, events, and portrait sessions. Whether your shoot is in Kandy, Colombo, Galle, or any other district, we can arrange travel details."
   },
   {
     id: 3,
-    question: "What is your typical turnaround time for commercial shoots?",
-    answer: "For standard commercial and architectural shoots, high-resolution edited proof sheets are provided within 7 days, and final retouched deliverables are sent within 14-21 business days, depending on project scale."
+    question: "Do you sell fine art prints of your wildlife photography?",
+    answer: "Yes! High-resolution fine-art prints of wildlife captured in Sri Lankan national parks (like Yala, Wilpattu, and Minneriya) are available. Please select the 'Wildlife Prints & Sessions' option in the form to discuss print sizes and framing options."
   },
   {
     id: 4,
-    question: "Can I license your photos for digital or print media?",
-    answer: "Yes. Many of my images are available for digital and print commercial licensing. Please send the details of the image you want to license and where it will be published via the contact form."
+    question: "How do we book a wedding or event photography session?",
+    answer: "You can book by filling out the form on this page or contacting me directly via WhatsApp at +94704574568. To secure your wedding date, we require a 30% advance deposit along with a signed booking agreement."
   }
 ];
 
 export default function Contact() {
-  const [formData, setFormData] = useState({ name: "", email: "", type: "Fine Art Print", message: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", type: "Wedding Photography", message: "" });
   const [submitted, setSubmitted] = useState(false);
   const [activeFaq, setActiveFaq] = useState(null);
 
@@ -35,7 +35,7 @@ export default function Contact() {
     // Simulate submission
     setTimeout(() => {
       setSubmitted(true);
-      setFormData({ name: "", email: "", type: "Fine Art Print", message: "" });
+      setFormData({ name: "", email: "", type: "Wedding Photography", message: "" });
     }, 600);
   };
 
@@ -50,11 +50,11 @@ export default function Contact() {
         <div className="contact-info-panel">
           <h2>Get in Touch</h2>
           <p>
-            Whether you are looking to purchase a limited edition print, commission a custom commercial architectural shoot, or discuss an editorial assignment, I would love to hear from you.
+            Whether you want to book a wedding shoot, schedule a portrait session, capture an event, or purchase wildlife prints, I would love to hear from you. Feel free to reach out via the form, WhatsApp, or social media!
           </p>
           
           <div className="contact-details">
-            <div className="contact-detail-item">
+            <a href="mailto:numeshravindra2003@gmail.com" className="contact-detail-item">
               <div className="contact-icon-wrapper">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
@@ -63,9 +63,9 @@ export default function Contact() {
               </div>
               <div className="contact-detail-text">
                 <h4>Email</h4>
-                <p>studio@numeshravindra.com</p>
+                <p>numeshravindra2003@gmail.com</p>
               </div>
-            </div>
+            </a>
 
             <div className="contact-detail-item">
               <div className="contact-icon-wrapper">
@@ -76,23 +76,45 @@ export default function Contact() {
               </div>
               <div className="contact-detail-text">
                 <h4>Location</h4>
-                <p>Colombo, Sri Lanka (Available Worldwide)</p>
+                <p>Mawanella, Sri Lanka (Available Island-wide)</p>
               </div>
             </div>
 
-            <div className="contact-detail-item">
+            <a href="https://wa.me/94704574568" target="_blank" rel="noopener noreferrer" className="contact-detail-item">
               <div className="contact-icon-wrapper">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
                 </svg>
               </div>
               <div className="contact-detail-text">
-                <h4>Instagram</h4>
+                <h4>WhatsApp</h4>
+                <p>+94 70 457 4568</p>
+              </div>
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=100090941785767" target="_blank" rel="noopener noreferrer" className="contact-detail-item">
+              <div className="contact-icon-wrapper">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </div>
+              <div className="contact-detail-text">
+                <h4>Facebook</h4>
+                <p>Numesh Ravindra Photography</p>
+              </div>
+            </a>
+
+            <a href="https://www.tiktok.com/@numesh_ravindra" target="_blank" rel="noopener noreferrer" className="contact-detail-item">
+              <div className="contact-icon-wrapper">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+                </svg>
+              </div>
+              <div className="contact-detail-text">
+                <h4>TikTok</h4>
                 <p>@numesh_ravindra</p>
               </div>
-            </div>
+            </a>
           </div>
         </div>
 
@@ -138,9 +160,9 @@ export default function Contact() {
                   value={formData.type}
                   onChange={(e) => setFormData({ ...formData, type: e.target.value })}
                 >
-                  <option value="Fine Art Print">Fine Art Print Purchase</option>
-                  <option value="Commercial Shoot">Commercial / Architectural Shoot</option>
-                  <option value="Editorial Assignment">Editorial Assignment</option>
+                  <option value="Wedding Photography">Wedding Photography</option>
+                  <option value="Wildlife Prints & Sessions">Wildlife Prints & Sessions</option>
+                  <option value="Event Coverage">Event Coverage</option>
                   <option value="Portrait Session">Portrait Session</option>
                   <option value="Other">Other Inquiry</option>
                 </select>
@@ -152,7 +174,7 @@ export default function Contact() {
                   id="message" 
                   rows="5" 
                   required
-                  placeholder="Describe your project, desired print size, or assignment timeline..."
+                  placeholder="Describe your event date, location, or photography needs..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 ></textarea>
