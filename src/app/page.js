@@ -142,7 +142,7 @@ export default function Home() {
           className="hero-bg"
         />
         <div className="hero-content animate-fade-in">
-          <h1 className="hero-title">Numesh Ravindra</h1>
+          <h1 className="hero-title">Numesh Ravindra Photography</h1>
           <p className="hero-subtitle">Weddings • Wildlife • Events • Portraits</p>
           <button className="hero-cta" onClick={() => document.getElementById("gallery").scrollIntoView()}>
             View Gallery
@@ -286,7 +286,7 @@ export default function Home() {
               
               <div className="lightbox-footer">
                 <span>Selected Works</span>
-                <span>NUMESH RAVINDRA</span>
+                <span>NUMESH RAVINDRA PHOTOGRAPHY</span>
               </div>
             </div>
           </div>

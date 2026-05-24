@@ -6,8 +6,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Numesh Ravindra Photography | Premium Fine Art Portfolio",
-  description: "Explore the fine art photography portfolio of Numesh Ravindra. Specializing in landscape, portrait, street, and architectural photography.",
+  title: "Numesh Ravindra Photography | Portfolio",
+  description: "Explore the photography portfolio of Numesh Ravindra in Mawanella, Sri Lanka. Specializing in wedding, wildlife, event, and portrait photography.",
 };
 
 export default function RootLayout({ children }) {
