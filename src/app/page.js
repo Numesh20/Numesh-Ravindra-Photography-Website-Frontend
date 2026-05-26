@@ -10,7 +10,7 @@ const IMAGES = [
     category: "Wedding",
     src: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80",
     location: "Mawanella, Sri Lanka",
-    exif: { camera: "Sony A7R V", lens: "FE 85mm f/1.2 GM", aperture: "f/1.2", shutter: "1/400s", iso: "100" }
+    exif: { camera: "Sony Alfa A7 III", lens: "FE 85mm f/1.2 GM", aperture: "f/1.2", shutter: "1/400s", iso: "100" }
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const IMAGES = [
     category: "Wedding",
     src: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=80",
     location: "Kandy, Sri Lanka",
-    exif: { camera: "Sony A7R V", lens: "FE 50mm f/1.2 GM", aperture: "f/2.0", shutter: "1/200s", iso: "100" }
+    exif: { camera: "Sony Alfa A7 III", lens: "FE 50mm f/1.2 GM", aperture: "f/2.0", shutter: "1/200s", iso: "100" }
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const IMAGES = [
     category: "Wildlife",
     src: "https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=80",
     location: "Yala National Park, Sri Lanka",
-    exif: { camera: "Sony A7R V", lens: "FE 200-600mm f/5.6-6.3 G", aperture: "f/6.3", shutter: "1/1000s", iso: "400" }
+    exif: { camera: "Sony Alfa A7 III", lens: "FE 200-600mm f/5.6-6.3 G", aperture: "f/6.3", shutter: "1/1000s", iso: "400" }
   },
   {
     id: 4,
@@ -34,7 +34,7 @@ const IMAGES = [
     category: "Wildlife",
     src: "https://images.unsplash.com/photo-1475113548554-5a36f1f523d6?auto=format&fit=crop&w=1200&q=80",
     location: "Mawanella, Sri Lanka",
-    exif: { camera: "Sony A7R V", lens: "FE 90mm f/2.8 Macro G", aperture: "f/4.0", shutter: "1/500s", iso: "200" }
+    exif: { camera: "Sony Alfa A7 III", lens: "FE 90mm f/2.8 Macro G", aperture: "f/4.0", shutter: "1/500s", iso: "200" }
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ const IMAGES = [
     category: "Event",
     src: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1200&q=80",
     location: "Colombo, Sri Lanka",
-    exif: { camera: "Sony A7R V", lens: "FE 24-70mm f/2.8 GM II", aperture: "f/2.8", shutter: "1/160s", iso: "1600" }
+    exif: { camera: "Sony Alfa A7 III", lens: "FE 24-70mm f/2.8 GM II", aperture: "f/2.8", shutter: "1/160s", iso: "1600" }
   },
   {
     id: 6,
@@ -50,7 +50,7 @@ const IMAGES = [
     category: "Event",
     src: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80",
     location: "BMICH - Colombo, Sri Lanka",
-    exif: { camera: "Sony A7R V", lens: "FE 24-70mm f/2.8 GM II", aperture: "f/4.0", shutter: "1/125s", iso: "800" }
+    exif: { camera: "Sony Alfa A7 III", lens: "FE 24-70mm f/2.8 GM II", aperture: "f/4.0", shutter: "1/125s", iso: "800" }
   },
   {
     id: 7,
@@ -58,7 +58,7 @@ const IMAGES = [
     category: "Portrait",
     src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80",
     location: "Studio - Mawanella, Sri Lanka",
-    exif: { camera: "Sony A7R V", lens: "FE 85mm f/1.2 GM", aperture: "f/1.2", shutter: "1/200s", iso: "100" }
+    exif: { camera: "Sony Alfa A7 III", lens: "FE 85mm f/1.2 GM", aperture: "f/1.2", shutter: "1/200s", iso: "100" }
   },
   {
     id: 8,
@@ -66,7 +66,7 @@ const IMAGES = [
     category: "Portrait",
     src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1200&q=80",
     location: "Ella, Sri Lanka",
-    exif: { camera: "Sony A7R V", lens: "FE 50mm f/1.2 GM", aperture: "f/1.2", shutter: "1/160s", iso: "200" }
+    exif: { camera: "Sony Alfa A7 III", lens: "FE 50mm f/1.2 GM", aperture: "f/1.2", shutter: "1/160s", iso: "200" }
   }
 ];
 

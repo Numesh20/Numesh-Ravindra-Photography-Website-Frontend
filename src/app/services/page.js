@@ -46,13 +46,13 @@ export default function Services() {
             </svg>
           </div>
           <h4>Portrait Session</h4>
-          <p style={{ color: 'var(--accent)', fontSize: '1.6rem', margin: '15px 0', fontWeight: 'bold' }}>LKR 25,000</p>
+          <p style={{ color: 'var(--accent)', fontSize: '1.6rem', margin: '15px 0', fontWeight: 'bold' }}>LKR 10,000</p>
           <ul style={{ listStyle: 'none' }}>
             <li style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '8px' }}>
               <span style={{ color: 'var(--accent)' }}>•</span> 2 hours outdoor or studio session
             </li>
             <li style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span style={{ color: 'var(--accent)' }}>•</span> 15 professionally retouched photos
+              <span style={{ color: 'var(--accent)' }}>•</span> 25 professionally retouched photos
             </li>
             <li style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '8px' }}>
               <span style={{ color: 'var(--accent)' }}>•</span> High-resolution digital delivery
@@ -73,7 +73,7 @@ export default function Services() {
             </svg>
           </div>
           <h4>Event Coverage</h4>
-          <p style={{ color: 'var(--accent)', fontSize: '1.6rem', margin: '15px 0', fontWeight: 'bold' }}>LKR 45,000</p>
+          <p style={{ color: 'var(--accent)', fontSize: '1.6rem', margin: '15px 0', fontWeight: 'bold' }}>LKR 25,000</p>
           <ul style={{ listStyle: 'none' }}>
             <li style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '8px' }}>
               <span style={{ color: 'var(--accent)' }}>•</span> Up to 4 hours of live event coverage

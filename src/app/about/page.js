@@ -58,8 +58,7 @@ export default function About() {
             </div>
             <h4>Camera Bodies</h4>
             <ul>
-              <li>Sony A7R V (61MP Full-Frame)</li>
-              <li>Sony A7 IV (Backup & Event Body)</li>
+              <li>Sony Alfa A7 III (24.2MP Full-Frame)</li>
             </ul>
           </div>
           
