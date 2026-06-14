@@ -41,6 +41,9 @@ export default function Navbar() {
       </div>
       <div className="nav-links">
         <Link href="/" className={pathname === "/" ? "active" : ""}>
+          Home
+        </Link>
+        <Link href="/gallery" className={pathname.startsWith("/gallery") ? "active" : ""}>
           Gallery
         </Link>
         <Link href="/services" className={pathname === "/services" ? "active" : ""}>
