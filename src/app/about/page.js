@@ -16,8 +16,8 @@ export default function About() {
       <div className="about-grid">
         <div className="about-image-container">
           <Image
-            src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=1200&q=80"
-            alt="Numesh Ravindra Profile Portrait"
+            src="/IMG_7530.PNG"
+            alt="Numesh Ravindra - Photographer"
             fill
             className="about-image"
             priority
