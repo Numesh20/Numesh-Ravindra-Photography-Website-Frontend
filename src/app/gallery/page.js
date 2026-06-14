@@ -13,7 +13,7 @@ const ALBUMS = [
   },
   {
     slug: "manavi-photo-shoot",
-    title: "Manavi Photo Shoot",
+    title: "Manavi Vihara",
     description: "An elegant portrait and studio photography session.",
     cover: "/gallery/Manavi photo shoot/Cover.jpg",
     count: 20,
@@ -21,7 +21,7 @@ const ALBUMS = [
   },
   {
     slug: "savindi-edit",
-    title: "Savindi",
+    title: "Savindi Thathsara",
     description: "A stunning outdoor portrait photography session.",
     cover: "/gallery/Savindi Edit/IMG_5089.jpg",
     count: 16,
@@ -29,7 +29,7 @@ const ALBUMS = [
   },
   {
     slug: "amandi-edit",
-    title: "Amandi",
+    title: "Amandi Rathnayake",
     description: "A beautiful curated photography collection.",
     cover: "/gallery/amandi Edit/10.jpg",
     count: 22,
