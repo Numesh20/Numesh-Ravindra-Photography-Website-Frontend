@@ -80,7 +80,6 @@ export default function GalleryPage() {
                     <span className="album-view-btn">View Album →</span>
                   </div>
                   <div className="album-badge">{album.count} photos</div>
-                  <div className="album-icon">{album.icon}</div>
                 </div>
                 <div className="album-info">
                   <h2 className="album-title">{album.title}</h2>
