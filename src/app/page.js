@@ -1,142 +1,47 @@
 'use client';
 
+import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
 
-const IMAGES = [
+const ALBUMS = [
   {
-    id: 1,
-    title: "Golden Hour Couple",
-    category: "Wedding",
-    src: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80",
-    location: "Mawanella, Sri Lanka",
-    exif: { camera: "Sony Alfa A7 III", lens: "FE 85mm f/1.2 GM", aperture: "f/1.2", shutter: "1/400s", iso: "100" }
+    slug: "anu-karunathilaka",
+    title: "Anu Karunathilaka",
+    description: "A beautiful romantic wedding photography collection.",
+    cover: "/gallery/portraits/Anu%20Karunathilaka/IMG_1.jpg",
+    count: 26,
   },
   {
-    id: 2,
-    title: "Emotional Embrace",
-    category: "Wedding",
-    src: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=80",
-    location: "Kandy, Sri Lanka",
-    exif: { camera: "Sony Alfa A7 III", lens: "FE 50mm f/1.2 GM", aperture: "f/2.0", shutter: "1/200s", iso: "100" }
+    slug: "manavi-photo-shoot",
+    title: "Manavi Vihara",
+    description: "An elegant portrait and studio photography session.",
+    cover: "/gallery/portraits/Manavi%20photo%20shoot/Cover.jpg",
+    count: 20,
   },
   {
-    id: 3,
-    title: "The King of Yala",
-    category: "Wildlife",
-    src: "https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=80",
-    location: "Yala National Park, Sri Lanka",
-    exif: { camera: "Sony Alfa A7 III", lens: "FE 200-600mm f/5.6-6.3 G", aperture: "f/6.3", shutter: "1/1000s", iso: "400" }
+    slug: "savindi-edit",
+    title: "Savindi Thathsara",
+    description: "A stunning outdoor portrait photography session.",
+    cover: "/gallery/portraits/Savindi%20Edit/IMG_5089.jpg",
+    count: 16,
   },
   {
-    id: 4,
-    title: "Morning Songbird",
-    category: "Wildlife",
-    src: "https://images.unsplash.com/photo-1475113548554-5a36f1f523d6?auto=format&fit=crop&w=1200&q=80",
-    location: "Mawanella, Sri Lanka",
-    exif: { camera: "Sony Alfa A7 III", lens: "FE 90mm f/2.8 Macro G", aperture: "f/4.0", shutter: "1/500s", iso: "200" }
-  },
-  {
-    id: 5,
-    title: "Vibrant Festivities",
-    category: "Event",
-    src: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1200&q=80",
-    location: "Colombo, Sri Lanka",
-    exif: { camera: "Sony Alfa A7 III", lens: "FE 24-70mm f/2.8 GM II", aperture: "f/2.8", shutter: "1/160s", iso: "1600" }
-  },
-  {
-    id: 6,
-    title: "Grand Stage Presentation",
-    category: "Event",
-    src: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80",
-    location: "BMICH - Colombo, Sri Lanka",
-    exif: { camera: "Sony Alfa A7 III", lens: "FE 24-70mm f/2.8 GM II", aperture: "f/4.0", shutter: "1/125s", iso: "800" }
-  },
-  {
-    id: 7,
-    title: "Amber Studio Profile",
-    category: "Portrait",
-    src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80",
-    location: "Studio - Mawanella, Sri Lanka",
-    exif: { camera: "Sony Alfa A7 III", lens: "FE 85mm f/1.2 GM", aperture: "f/1.2", shutter: "1/200s", iso: "100" }
-  },
-  {
-    id: 8,
-    title: "Natural Light Study",
-    category: "Portrait",
-    src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1200&q=80",
-    location: "Ella, Sri Lanka",
-    exif: { camera: "Sony Alfa A7 III", lens: "FE 50mm f/1.2 GM", aperture: "f/1.2", shutter: "1/160s", iso: "200" }
+    slug: "amandi-edit",
+    title: "Amandi Rathnayake",
+    description: "A beautiful curated photography collection.",
+    cover: "/gallery/portraits/amandi%20Edit/10.jpg",
+    count: 22,
   }
 ];
 
-const CATEGORIES = ["All", "Wedding", "Wildlife", "Event", "Portrait"];
-
 export default function Home() {
-  const [activeCategory, setActiveCategory] = useState("All");
-  const [lightboxImageIndex, setLightboxImageIndex] = useState(null);
-
-  // Filter images
-  const filteredImages = activeCategory === "All" 
-    ? IMAGES 
-    : IMAGES.filter(img => img.category === activeCategory);
-
-  // Lightbox controls
-  const openLightbox = (id) => {
-    const index = IMAGES.findIndex(img => img.id === id);
-    setLightboxImageIndex(index);
-  };
-
-  const closeLightbox = () => {
-    setLightboxImageIndex(null);
-  };
-
-  const nextImage = (e) => {
-    e.stopPropagation();
-    if (lightboxImageIndex !== null) {
-      setLightboxImageIndex((lightboxImageIndex + 1) % IMAGES.length);
-    }
-  };
-
-  const prevImage = (e) => {
-    e.stopPropagation();
-    if (lightboxImageIndex !== null) {
-      setLightboxImageIndex((lightboxImageIndex - 1 + IMAGES.length) % IMAGES.length);
-    }
-  };
-
-  // Keyboard navigation for Lightbox
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (lightboxImageIndex === null) return;
-      if (e.key === "Escape") closeLightbox();
-      if (e.key === "ArrowRight") nextImage(e);
-      if (e.key === "ArrowLeft") prevImage(e);
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [lightboxImageIndex]);
-
-  // Prevent scroll when lightbox open
-  useEffect(() => {
-    if (lightboxImageIndex !== null) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-    return () => { document.body.style.overflow = "unset"; };
-  }, [lightboxImageIndex]);
-
-  const activeImage = lightboxImageIndex !== null ? IMAGES[lightboxImageIndex] : null;
-
   return (
     <main>
       {/* Hero Section */}
       <section className="hero">
-        <Image 
-          src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=90" 
-          alt="Hero background" 
+        <Image
+          src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=90"
+          alt="Hero background"
           fill
           priority
           className="hero-bg"
@@ -144,11 +49,17 @@ export default function Home() {
         <div className="hero-content animate-fade-in">
           <h1 className="hero-title">Numesh Ravindra Photography</h1>
           <p className="hero-subtitle">Weddings • Wildlife • Events • Portraits</p>
-          <button className="hero-cta" onClick={() => document.getElementById("gallery").scrollIntoView()}>
+          <button
+            className="hero-cta"
+            onClick={() => document.getElementById('albums').scrollIntoView({ behavior: 'smooth' })}
+          >
             View Gallery
           </button>
         </div>
-        <div className="scroll-down" onClick={() => document.getElementById("gallery").scrollIntoView()}>
+        <div
+          className="scroll-down"
+          onClick={() => document.getElementById('albums').scrollIntoView({ behavior: 'smooth' })}
+        >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <line x1="12" y1="5" x2="12" y2="19"></line>
             <polyline points="19 12 12 19 5 12"></polyline>
@@ -156,142 +67,141 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <section id="gallery" className="gallery-section">
+      {/* Albums Section */}
+      <section id="albums" className="gallery-section">
         <div className="section-intro animate-fade-in">
-          <h2 className="section-title">Selected Works</h2>
-          <p className="section-desc">A curated collection of captured moments from journeys around Sri Lanka.</p>
+          <h2 className="section-title">Photo Albums</h2>
+          <p className="section-desc">Browse through curated collections of photography work from across Sri Lanka.</p>
         </div>
 
-        {/* Category Filters */}
-        <div className="filter-bar animate-fade-in">
-          {CATEGORIES.map(category => (
-            <button
-              key={category}
-              className={`filter-btn ${activeCategory === category ? "active" : ""}`}
-              onClick={() => setActiveCategory(category)}
+        <div className="albums-grid animate-fade-in">
+          {ALBUMS.map((album) => (
+            <Link
+              key={album.slug}
+              href={`/gallery/${album.slug}`}
+              style={{ textDecoration: 'none', color: 'inherit' }}
             >
-              {category}
-            </button>
-          ))}
-        </div>
-
-        {/* Gallery Grid */}
-        <div className="gallery-grid">
-          {filteredImages.map((image) => (
-            <div 
-              key={image.id} 
-              className="gallery-item animate-fade-in"
-              onClick={() => openLightbox(image.id)}
-            >
-              <div className="gallery-item-inner">
-                <Image 
-                  src={image.src} 
-                  alt={image.title} 
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="gallery-image"
-                  loading="lazy"
-                />
-                <div className="gallery-item-overlay">
-                  <div className="gallery-item-info">
-                    <h3 className="gallery-item-title">{image.title}</h3>
-                    <div className="gallery-item-location">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                        <circle cx="12" cy="10" r="3"></circle>
-                      </svg>
-                      {image.location}
-                    </div>
+              <div className="album-card">
+                <div className="album-cover">
+                  <img
+                    src={album.cover}
+                    alt={album.title}
+                    className="album-cover-img"
+                  />
+                  <div className="album-overlay">
+                    <span className="album-view-btn">View Album →</span>
                   </div>
+                  <div className="album-badge">{album.count} photos</div>
+                </div>
+                <div className="album-info">
+                  <h3 className="album-title">{album.title}</h3>
+                  <p className="album-desc-text">{album.description}</p>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
+        </div>
+
+        <div style={{ textAlign: 'center', marginTop: '50px' }}>
+          <Link href="/gallery" className="hero-cta" style={{ display: 'inline-block', textDecoration: 'none' }}>
+            View All Albums
+          </Link>
         </div>
       </section>
 
-      {/* Immersive Lightbox */}
-      {activeImage && (
-        <div className="lightbox" onClick={closeLightbox}>
-          <div className="lightbox-backdrop"></div>
-          
-          <button className="lightbox-close-btn" onClick={closeLightbox} aria-label="Close Lightbox">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-              <line x1="18" y1="6" x2="6" y2="18"></line>
-              <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-          </button>
-          
-          <button className="lightbox-nav-btn lightbox-prev" onClick={prevImage} aria-label="Previous Image">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-              <polyline points="15 18 9 12 15 6"></polyline>
-            </svg>
-          </button>
-          
-          <button className="lightbox-nav-btn lightbox-next" onClick={nextImage} aria-label="Next Image">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-              <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-          </button>
-
-          <div className="lightbox-container" onClick={(e) => e.stopPropagation()}>
-            <div className="lightbox-image-section">
-              <img 
-                src={activeImage.src} 
-                alt={activeImage.title} 
-                className="lightbox-img"
-              />
-            </div>
-            
-            <div className="lightbox-info-section">
-              <div className="lightbox-meta">
-                <h3>{activeImage.title}</h3>
-                <div className="location">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                    <circle cx="12" cy="10" r="3"></circle>
-                  </svg>
-                  {activeImage.location}
-                </div>
-                
-                <h4 className="lightbox-specs-title">Camera Settings</h4>
-                <div className="spec-grid">
-                  <div className="spec-item">
-                    <span className="spec-label">Camera</span>
-                    <span className="spec-value">{activeImage.exif.camera}</span>
-                  </div>
-                  <div className="spec-item">
-                    <span className="spec-label">Lens</span>
-                    <span className="spec-value">{activeImage.exif.lens}</span>
-                  </div>
-                  <div className="spec-item">
-                    <span className="spec-label">Aperture</span>
-                    <span className="spec-value">{activeImage.exif.aperture}</span>
-                  </div>
-                  <div className="spec-item">
-                    <span className="spec-label">Exposure</span>
-                    <span className="spec-value">{activeImage.exif.shutter}</span>
-                  </div>
-                  <div className="spec-item">
-                    <span className="spec-label">ISO</span>
-                    <span className="spec-value">{activeImage.exif.iso}</span>
-                  </div>
-                  <div className="spec-item">
-                    <span className="spec-label">Category</span>
-                    <span className="spec-value">{activeImage.category}</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="lightbox-footer">
-                <span>Selected Works</span>
-                <span>NUMESH RAVINDRA PHOTOGRAPHY</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      <style jsx>{`
+        .albums-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 28px;
+          padding: 0 4%;
+          max-width: 1300px;
+          margin: 0 auto;
+        }
+        .album-card {
+          background: rgba(255,255,255,0.04);
+          border: 1px solid rgba(255,255,255,0.08);
+          border-radius: 16px;
+          overflow: hidden;
+          transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+          cursor: pointer;
+        }
+        .album-card:hover {
+          transform: translateY(-6px);
+          border-color: var(--accent);
+          box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+        .album-cover {
+          position: relative;
+          height: 260px;
+          overflow: hidden;
+          background: #111;
+        }
+        .album-cover-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.5s ease;
+          display: block;
+        }
+        .album-card:hover .album-cover-img {
+          transform: scale(1.06);
+        }
+        .album-overlay {
+          position: absolute;
+          inset: 0;
+          background: rgba(0,0,0,0.4);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+          z-index: 2;
+        }
+        .album-card:hover .album-overlay {
+          opacity: 1;
+        }
+        .album-view-btn {
+          background: var(--accent);
+          color: #000;
+          padding: 10px 24px;
+          border-radius: 50px;
+          font-weight: 700;
+          font-size: 0.9rem;
+          letter-spacing: 0.5px;
+        }
+        .album-badge {
+          position: absolute;
+          bottom: 12px;
+          right: 12px;
+          background: rgba(0,0,0,0.75);
+          color: var(--accent);
+          padding: 4px 12px;
+          border-radius: 50px;
+          font-size: 0.78rem;
+          font-weight: 600;
+          z-index: 3;
+          backdrop-filter: blur(8px);
+          border: 1px solid rgba(255,255,255,0.1);
+        }
+        .album-info {
+          padding: 18px 20px 22px;
+        }
+        .album-title {
+          font-size: 1.1rem;
+          font-weight: 700;
+          color: var(--text);
+          margin: 0 0 7px;
+          letter-spacing: 0.8px;
+          text-transform: uppercase;
+        }
+        .album-desc-text {
+          color: var(--text-muted);
+          font-size: 0.87rem;
+          line-height: 1.6;
+          margin: 0;
+        }
+      `}</style>
     </main>
   );
 }
