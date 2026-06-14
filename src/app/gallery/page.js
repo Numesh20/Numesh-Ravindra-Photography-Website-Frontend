@@ -7,33 +7,33 @@ const ALBUMS = [
     slug: "anu-karunathilaka",
     title: "Anu Karunathilaka",
     description: "A beautiful romantic wedding photography collection.",
-    cover: "/gallery/Anu Karunathilaka/IMG_1.jpg",
+    cover: "/gallery/portraits/Anu%20Karunathilaka/IMG_1.jpg",
     count: 26,
-    icon: "💍"
+
   },
   {
     slug: "manavi-photo-shoot",
     title: "Manavi Vihara",
     description: "An elegant portrait and studio photography session.",
-    cover: "/gallery/Manavi photo shoot/Cover.jpg",
+    cover: "/gallery/portraits/Manavi%20photo%20shoot/Cover.jpg",
     count: 20,
-    icon: "🎭"
+
   },
   {
     slug: "savindi-edit",
     title: "Savindi Thathsara",
     description: "A stunning outdoor portrait photography session.",
-    cover: "/gallery/Savindi Edit/IMG_5089.jpg",
+    cover: "/gallery/portraits/Savindi%20Edit/IMG_5089.jpg",
     count: 16,
-    icon: "✨"
+
   },
   {
     slug: "amandi-edit",
     title: "Amandi Rathnayake",
     description: "A beautiful curated photography collection.",
-    cover: "/gallery/amandi Edit/10.jpg",
+    cover: "/gallery/portraits/amandi%20Edit/10.jpg",
     count: 22,
-    icon: "📷"
+
   }
 ];
 

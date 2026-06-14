@@ -131,7 +131,7 @@ export default function AlbumPage() {
   const [lightboxIndex, setLightboxIndex] = useState(null);
 
   const getPhotoSrc = (folder, filename) =>
-    `/gallery/${encodeURIComponent(folder)}/${encodeURIComponent(filename)}`;
+    `/gallery/portraits/${encodeURIComponent(folder)}/${encodeURIComponent(filename)}`;
 
   const openLightbox = (index) => setLightboxIndex(index);
   const closeLightbox = () => setLightboxIndex(null);
