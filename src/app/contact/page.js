@@ -209,6 +209,83 @@ export default function Contact() {
           ))}
         </div>
       </section>
+      {/* Google Maps Section */}
+      <section style={{ padding: '60px 4% 80px', maxWidth: '1100px', margin: '0 auto' }}>
+        <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+          <h3 className="section-title">Find Me Here</h3>
+          <p className="section-desc">Based in Mawanella, Sri Lanka — Available island-wide for all shoots.</p>
+        </div>
+
+        <div style={{
+          borderRadius: '20px',
+          overflow: 'hidden',
+          border: '1px solid rgba(255,255,255,0.08)',
+          boxShadow: '0 20px 60px rgba(0,0,0,0.4)',
+          position: 'relative'
+        }}>
+          {/* Map Header */}
+          <div style={{
+            background: 'rgba(255,255,255,0.04)',
+            padding: '16px 24px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '10px',
+            borderBottom: '1px solid rgba(255,255,255,0.08)'
+          }}>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span style={{ color: 'var(--text)', fontWeight: '600', fontSize: '0.9rem' }}>
+              Mawanella, Kegalle District, Sri Lanka
+            </span>
+          </div>
+
+          {/* Google Maps Embed */}
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31680.584705422564!2d80.43510271298828!3d7.252702500000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3254c8c06a837%3A0x19c73f2a1e8f1e70!2sMawanella!5e0!3m2!1sen!2slk!4v1718700000000!5m2!1sen!2slk"
+            width="100%"
+            height="420"
+            style={{ border: 0, display: 'block' }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Numesh Ravindra Photography - Mawanella Location"
+          ></iframe>
+
+          {/* Map Footer */}
+          <div style={{
+            background: 'rgba(255,255,255,0.04)',
+            padding: '14px 24px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            flexWrap: 'wrap',
+            gap: '10px',
+            borderTop: '1px solid rgba(255,255,255,0.08)'
+          }}>
+            <span style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>
+              📷 Studio & outdoor sessions available in Mawanella
+            </span>
+            <a
+              href="https://maps.google.com/?q=Mawanella,+Sri+Lanka"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color: 'var(--accent)',
+                fontSize: '0.85rem',
+                fontWeight: '600',
+                textDecoration: 'none',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px'
+              }}
+            >
+              Open in Google Maps →
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
