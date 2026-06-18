@@ -47,6 +47,7 @@ export default function Home() {
           fill
           priority
           className="hero-bg"
+          style={{ objectFit: 'cover', objectPosition: 'center center' }}
         />
         <div className="hero-content animate-fade-in">
           <h1 className="hero-title">Numesh Ravindra Photography</h1>
