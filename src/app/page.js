@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import StatsSection from "./components/StatsSection";
+
 
 const ALBUMS = [
   {
@@ -66,6 +68,9 @@ export default function Home() {
           </svg>
         </div>
       </section>
+
+      {/* Stats Dashboard */}
+      <StatsSection />
 
       {/* Albums Section */}
       <section id="albums" className="gallery-section">

@@ -1120,3 +1120,116 @@ main {
     letter-spacing: 0.2em;
   }
 }
+
+/* ── Stats Dashboard ─────────────────────────── */
+.sd-root {
+  padding: 60px 4%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.sd-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 28px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  padding-bottom: 20px;
+}
+.sd-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.5px;
+}
+/* Cards */
+.sd-card {
+  background: #0d0d12;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 14px;
+  padding: 22px 24px;
+}
+.sd-card-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+  color: var(--text-muted);
+}
+/* Top row */
+.sd-top-row {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+/* Info card */
+.sd-stat-list { display: flex; flex-direction: column; gap: 10px; }
+.sd-stat-row  { display: flex; align-items: center; gap: 8px; font-size: 0.88rem; }
+.sd-stat-icon { width: 20px; text-align: center; }
+.sd-stat-label{ color: #e879f9; flex: 1; }
+.sd-stat-val  { color: var(--accent); font-weight: 700; }
+/* Contribution card */
+.sd-contrib-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 16px;
+}
+.sd-contrib-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.sd-contrib-num {
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1;
+}
+.sd-contrib-lbl { font-size: 0.75rem; font-weight: 700; text-align: center; color: var(--text-muted); }
+.sd-contrib-sub { font-size: 0.68rem; color: #555; text-align: center; }
+.sd-contrib-divider {
+  width: 1px; height: 80px;
+  background: rgba(255,255,255,0.08);
+  flex-shrink: 0;
+}
+/* Middle row */
+.sd-mid-row {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+/* Donut */
+.sd-donut-wrap { display: flex; align-items: center; gap: 20px; }
+.sd-legend { display: flex; flex-direction: column; gap: 8px; }
+.sd-legend-item { display: flex; align-items: center; gap: 8px; font-size: 0.8rem; color: var(--text-muted); }
+.sd-legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+/* Bar chart */
+.sd-bars { display: flex; flex-direction: column; gap: 14px; }
+.sd-bar-row { display: flex; align-items: center; gap: 10px; }
+.sd-bar-name { font-size: 0.78rem; color: var(--text-muted); width: 70px; flex-shrink: 0; }
+.sd-bar-track {
+  flex: 1;
+  background: rgba(255,255,255,0.06);
+  border-radius: 4px;
+  height: 10px;
+  overflow: hidden;
+}
+.sd-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.8s ease;
+}
+.sd-bar-count { font-size: 0.78rem; color: var(--text); font-weight: 600; width: 24px; text-align: right; }
+/* Graph card */
+.sd-graph-card { }
+
+/* Responsive */
+@media (max-width: 700px) {
+  .sd-top-row, .sd-mid-row { grid-template-columns: 1fr; }
+  .sd-contrib-card { flex-wrap: wrap; }
+  .sd-contrib-divider { display: none; }
+}
