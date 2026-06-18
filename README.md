@@ -43,4 +43,4 @@ npm run build
 ```
 
 ---
-*Created with ❤️ by Numesh Ravindra.*
+*Created with  by Numesh Ravindra.*
