@@ -106,13 +106,6 @@ export default function Navbar() {
               {label}
             </Link>
           ))}
-
-          {/* Contact info inside mobile menu */}
-          <div className="mobile-menu-footer">
-            <a href="https://wa.me/94704574568" target="_blank" rel="noopener noreferrer" style={{ color: '#25D366', fontWeight: '600', fontSize: '0.9rem', textDecoration: 'none' }}>
-              📱 WhatsApp: +94 70 457 4568
-            </a>
-          </div>
         </nav>
       </div>
     </>
