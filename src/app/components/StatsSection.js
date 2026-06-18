@@ -3,10 +3,10 @@
 import { useEffect, useRef, useState } from "react";
 
 const STATS = [
-  { value: 3,   suffix: "+", label: "Years of\nExperience",  icon: "📅" },
-  { value: 84,  suffix: "+", label: "Photos in\nPortfolio",  icon: "📸" },
-  { value: 4,   suffix: "",  label: "Photo\nAlbums",          icon: "🗂️" },
-  { value: 100, suffix: "%", label: "Client\nSatisfaction",   icon: "⭐" },
+  { value: 3, suffix: "+", label: "Years of\nExperience", icon: "" },
+  { value: 84, suffix: "+", label: "Photos in\nPortfolio", icon: "" },
+  { value: 4, suffix: "", label: "Photo\nAlbums", icon: "" },
+  { value: 100, suffix: "%", label: "Client\nSatisfaction", icon: "" },
 ];
 
 function AnimatedNumber({ target, suffix, start }) {
