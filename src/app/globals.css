@@ -1233,3 +1233,180 @@ main {
   .sd-contrib-card { flex-wrap: wrap; }
   .sd-contrib-divider { display: none; }
 }
+
+/* ── Hamburger Button ─────────────────────────── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text-main);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── Mobile Menu Overlay ──────────────────────── */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 8, 10, 0.98);
+  backdrop-filter: blur(20px);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.mobile-menu.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 20px;
+}
+.mobile-nav-link {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  transition: color 0.2s ease, transform 0.2s ease;
+  width: 100%;
+  text-align: center;
+}
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+  color: var(--accent);
+  transform: scale(1.04);
+}
+.mobile-menu-footer {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  width: 100%;
+  text-align: center;
+}
+
+/* ── Mobile Global Fixes ──────────────────────── */
+@media (max-width: 768px) {
+  /* Show hamburger, hide desktop nav */
+  .hamburger { display: flex; }
+  .nav-links  { display: none; }
+
+  /* Hero */
+  .hero-title    { font-size: 2rem !important; letter-spacing: 1px; }
+  .hero-subtitle { font-size: 0.8rem !important; letter-spacing: 0.15em; }
+  .hero-cta      { padding: 12px 28px; font-size: 0.85rem; }
+
+  /* Album cards on homepage */
+  .albums-grid {
+    grid-template-columns: 1fr !important;
+    padding: 0 4%;
+  }
+
+  /* Gallery albums page */
+  .album-photo-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px;
+  }
+
+  /* Stats dashboard */
+  .sd-root { padding: 40px 4%; }
+  .sd-top-row, .sd-mid-row { grid-template-columns: 1fr; }
+  .sd-contrib-card { flex-wrap: wrap; gap: 20px; }
+  .sd-contrib-divider { display: none; }
+  .sd-donut-wrap { flex-direction: column; align-items: flex-start; }
+
+  /* Lightbox mobile */
+  .lightbox-container {
+    flex-direction: column !important;
+    height: auto !important;
+    max-height: 95vh;
+    overflow-y: auto;
+  }
+  .lightbox-image-section {
+    flex: none !important;
+    height: 60vw !important;
+    min-height: 200px;
+  }
+  .lightbox-info-section {
+    flex: none !important;
+    border-left: none !important;
+    border-top: 1px solid rgba(255,255,255,0.1) !important;
+    padding: 16px !important;
+  }
+  .lightbox-nav-btn {
+    top: 35% !important;
+  }
+  .lightbox-close-btn {
+    top: 10px !important;
+    right: 10px !important;
+  }
+
+  /* Footer */
+  .footer-content {
+    grid-template-columns: 1fr !important;
+    gap: 36px;
+  }
+
+  /* About page */
+  .about-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .about-image-container {
+    height: 280px !important;
+    position: relative !important;
+  }
+
+  /* Contact page */
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Services */
+  .packages-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Section titles */
+  .section-title { font-size: 1.6rem; }
+}
+
+@media (max-width: 480px) {
+  /* Smallest phones */
+  .hero-title { font-size: 1.6rem !important; }
+  .mobile-nav-link { font-size: 1.6rem; }
+  .album-photo-grid { grid-template-columns: 1fr !important; }
+  .sd-stat-num { font-size: 2rem; }
+}
