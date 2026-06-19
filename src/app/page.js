@@ -97,7 +97,6 @@ export default function Home() {
                   <div className="album-overlay">
                     <span className="album-view-btn">View Album →</span>
                   </div>
-                  <div className="album-badge">{album.count} photos</div>
                 </div>
                 <div className="album-info">
                   <h3 className="album-title">{album.title}</h3>
