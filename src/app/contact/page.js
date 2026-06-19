@@ -54,7 +54,7 @@ export default function Contact() {
           </p>
           
           <div className="contact-details">
-            <a href="mailto:numeshravindra2003@gmail.com" className="contact-detail-item">
+            <a href="mailto:numesh.ravindra.photography@gmail.com" className="contact-detail-item">
               <div className="contact-icon-wrapper">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
@@ -63,7 +63,7 @@ export default function Contact() {
               </div>
               <div className="contact-detail-text">
                 <h4>Email</h4>
-                <p>numeshravindra2003@gmail.com</p>
+                <p>numesh.ravindra.photography@gmail.com</p>
               </div>
             </a>
 
