@@ -1,6 +1,12 @@
 'use client';
 
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
+
+const SERVICE_ID  = 'service_mqgvptj';
+const TEMPLATE_ID = 'template_xfytr0h';
+const PUBLIC_KEY  = '4adMArwJqy9jB6J5D';
+
 
 const FAQ_ITEMS = [
   {
@@ -26,18 +32,38 @@ const FAQ_ITEMS = [
 ];
 
 export default function Contact() {
-  const [formData, setFormData] = useState({ name: "", email: "", type: "Wedding Photography", message: "" });
+  const [formData, setFormData]   = useState({ name: '', email: '', type: 'Wedding Photography', message: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending]     = useState(false);
+  const [error, setError]         = useState('');
   const [activeFaq, setActiveFaq] = useState(null);
+  const formRef = useRef(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Simulate submission
-    setTimeout(() => {
+    setSending(true);
+    setError('');
+    try {
+      await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        {
+          name:    formData.name,
+          email:   formData.email,
+          type:    formData.type,
+          message: formData.message,
+        },
+        PUBLIC_KEY
+      );
       setSubmitted(true);
-      setFormData({ name: "", email: "", type: "Wedding Photography", message: "" });
-    }, 600);
+      setFormData({ name: '', email: '', type: 'Wedding Photography', message: '' });
+    } catch (err) {
+      setError('Sorry, something went wrong. Please try WhatsApp instead.');
+    } finally {
+      setSending(false);
+    }
   };
+
 
   const toggleFaq = (id) => {
     setActiveFaq(activeFaq === id ? null : id);
@@ -180,7 +206,12 @@ export default function Contact() {
                 ></textarea>
               </div>
 
-              <button type="submit" className="submit-btn">Send Inquiry</button>
+              {error && (
+                <p style={{ color: '#ef4444', fontSize: '0.85rem', marginBottom: '10px' }}>{error}</p>
+              )}
+              <button type="submit" className="submit-btn" disabled={sending}>
+                {sending ? '⏳ Sending...' : 'Send Inquiry'}
+              </button>
             </form>
           )}
         </div>
