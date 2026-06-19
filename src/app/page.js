@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import StatsSection from "./components/StatsSection";
+import Testimonials from "./components/Testimonials";
 
 
 const ALBUMS = [
@@ -113,6 +114,9 @@ export default function Home() {
           </Link>
         </div>
       </section>
+
+      {/* Testimonials */}
+      <Testimonials />
 
       <style jsx>{`
         .albums-grid {
