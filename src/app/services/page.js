@@ -1,6 +1,24 @@
 export const metadata = {
-  title: "Services | Numesh Ravindra Photography",
-  description: "Wedding, portrait, and event photography package pricing in Mawanella, Sri Lanka.",
+  title: "Photography Services & Pricing Packages | Numesh Ravindra Photography",
+  description: "Explore photography service pricing packages in Sri Lanka. Tailored options for weddings, professional event coverage, outdoor/studio portrait sessions, and wildlife prints.",
+  keywords: [
+    "Wedding photography packages Sri Lanka",
+    "Portrait photography prices Sri Lanka",
+    "Event photography rates Mawanella",
+    "Photographer cost Sri Lanka",
+    "Photography services pricing"
+  ],
+  alternates: {
+    canonical: "https://numesh-ravindra-photography-website.vercel.app/services",
+  },
+  openGraph: {
+    title: "Photography Services & Pricing Packages | Numesh Ravindra Photography",
+    description: "Explore photography service pricing packages in Sri Lanka. Tailored options for weddings, professional event coverage, outdoor/studio portrait sessions, and wildlife prints.",
+    url: "https://numesh-ravindra-photography-website.vercel.app/services",
+    siteName: "Numesh Ravindra Photography",
+    locale: "en_LK",
+    type: "website",
+  },
 };
 
 export default function Services() {
