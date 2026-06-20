@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const ALBUM_DATA = {
   "anu-karunathilaka": {
@@ -200,11 +201,13 @@ export default function AlbumClient({ albumSlug }) {
               className="album-photo-item"
               onClick={() => openLightbox(index)}
             >
-              <img
+              <Image
                 src={getPhotoSrc(album.folder, photo.filename)}
                 alt={`${album.title} - Photo ${photo.id}`}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
+                style={{ objectFit: 'cover' }}
                 className="album-photo-img"
-                loading="lazy"
               />
               <div className="album-photo-overlay">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
@@ -246,10 +249,14 @@ export default function AlbumClient({ albumSlug }) {
 
           <div className="lightbox-container" onClick={(e) => e.stopPropagation()}>
             <div className="lightbox-image-section">
-              <img
+              <Image
                 src={getPhotoSrc(album.folder, activePhoto.filename)}
                 alt={`${album.title} - Photo ${activePhoto.id}`}
+                fill
+                sizes="(max-width: 768px) 100vw, 70vw"
+                style={{ objectFit: 'contain' }}
                 className="lightbox-img"
+                priority
               />
             </div>
             <div className="lightbox-info-section">

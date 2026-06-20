@@ -89,9 +89,12 @@ export default function HomeClient() {
             >
               <div className="album-card">
                 <div className="album-cover">
-                  <img
+                  <Image
                     src={album.cover}
                     alt={album.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    style={{ objectFit: 'cover' }}
                     className="album-cover-img"
                   />
                   <div className="album-overlay">

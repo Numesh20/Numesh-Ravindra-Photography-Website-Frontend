@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 const ALBUMS = [
   {
@@ -60,16 +61,12 @@ export default function GalleryClient() {
             >
               <div className="album-card">
                 <div className="album-cover">
-                  <img
+                  <Image
                     src={album.cover}
                     alt={album.title}
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      objectFit: 'cover',
-                      transition: 'transform 0.5s ease',
-                      display: 'block'
-                    }}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    style={{ objectFit: 'cover' }}
                     className="album-cover-img"
                   />
                   <div className="album-overlay">
@@ -105,6 +102,9 @@ export default function GalleryClient() {
           height: 260px;
           overflow: hidden;
           background: #111;
+        }
+        .album-cover-img {
+          transition: transform 0.5s ease;
         }
         .album-card:hover .album-cover-img {
           transform: scale(1.08);
