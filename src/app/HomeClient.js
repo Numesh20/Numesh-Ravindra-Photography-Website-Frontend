@@ -128,18 +128,18 @@ export default function HomeClient() {
           {/* Floating Stat Badges */}
           <div className="hero-badges">
             <div className="hero-badge">
-              <span className="hb-num">500+</span>
+              <span className="hb-num">50+</span>
               <span className="hb-label">Happy Clients</span>
             </div>
             <div className="hero-badge-divider" />
             <div className="hero-badge">
-              <span className="hb-num">8+</span>
+              <span className="hb-num">3+</span>
               <span className="hb-label">Years Experience</span>
             </div>
             <div className="hero-badge-divider" />
             <div className="hero-badge">
-              <span className="hb-num">50+</span>
-              <span className="hb-label">Weddings Covered</span>
+              <span className="hb-num">15+</span>
+              <span className="hb-label">Event Coverage</span>
             </div>
           </div>
         </div>
