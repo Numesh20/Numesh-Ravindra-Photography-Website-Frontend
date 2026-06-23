@@ -3,9 +3,9 @@
 import { useState } from "react";
 import emailjs from '@emailjs/browser';
 
-const SERVICE_ID  = 'service_mqgvptj';
+const SERVICE_ID = 'service_mqgvptj';
 const TEMPLATE_ID = 'template_xfytr0h';
-const PUBLIC_KEY  = '4adMArwJqy9jB6J5D';
+const PUBLIC_KEY = '4adMArwJqy9jB6J5D';
 
 const FAQ_ITEMS = [
   {
@@ -83,8 +83,8 @@ export default function ContactClient() {
     name: '', email: '', phone: '', type: 'Wedding Photography', date: '', message: ''
   });
   const [submitted, setSubmitted] = useState(false);
-  const [sending, setSending]     = useState(false);
-  const [error, setError]         = useState('');
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState('');
   const [activeFaq, setActiveFaq] = useState(null);
 
   const handleSubmit = async (e) => {
@@ -96,11 +96,11 @@ export default function ContactClient() {
         SERVICE_ID,
         TEMPLATE_ID,
         {
-          name:    formData.name,
-          email:   formData.email,
-          phone:   formData.phone,
-          type:    formData.type,
-          date:    formData.date,
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          type: formData.type,
+          date: formData.date,
           message: formData.message,
         },
         PUBLIC_KEY
@@ -123,7 +123,7 @@ export default function ContactClient() {
       <section className="cp-hero">
         <div className="cp-hero-overlay" />
         <div className="cp-hero-content animate-fade-in">
-          <p className="cp-hero-eyebrow">📷 Available Island-wide · Sri Lanka</p>
+          <p className="cp-hero-eyebrow"> Available Island-wide · Sri Lanka</p>
           <h1 className="cp-hero-title">Let's Create Something<br /><span>Timeless Together</span></h1>
           <p className="cp-hero-sub">
             Book a session, ask a question, or just say hello — I'd love to hear from you.
