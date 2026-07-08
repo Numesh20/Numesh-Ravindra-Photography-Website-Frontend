@@ -1502,3 +1502,122 @@ main {
   .album-photo-grid { grid-template-columns: 1fr !important; }
   .sd-stat-num { font-size: 2rem; }
 }
+
+/* ════════════════════════════════════════════════
+   COMPREHENSIVE MOBILE IMPROVEMENTS
+   ════════════════════════════════════════════════ */
+
+/* ── Hide floating WhatsApp on mobile (bottom bar handles it) ── */
+@media (max-width: 768px) {
+  .whatsapp-float { display: none !important; }
+}
+
+/* ── Add bottom padding so content isn't hidden by mobile bar ── */
+@media (max-width: 768px) {
+  body { padding-bottom: 74px; }
+  body.menu-open { overflow: hidden; }
+}
+
+/* ── Better touch targets for all interactive elements ── */
+@media (max-width: 768px) {
+  button,
+  [role="button"],
+  input[type="submit"],
+  input[type="button"],
+  select {
+    min-height: 44px;
+  }
+  a { -webkit-tap-highlight-color: rgba(212,175,55,0.15); }
+}
+
+/* ── Gallery page improvements on mobile ── */
+@media (max-width: 768px) {
+  .gallery-hero {
+    padding: 100px 4% 50px !important;
+  }
+  .gallery-hero h1 {
+    font-size: 2.5rem !important;
+  }
+  .albums-grid-full {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px !important;
+  }
+}
+@media (max-width: 500px) {
+  .albums-grid-full {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── Services page improvements on mobile ── */
+@media (max-width: 768px) {
+  .services-hero {
+    padding: 100px 4% 50px !important;
+  }
+  .packages-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  .package-card { padding: 28px 20px !important; }
+}
+
+/* ── Section general spacing on mobile ── */
+@media (max-width: 768px) {
+  .gallery-section {
+    padding: 50px 0 !important;
+  }
+  .section-intro {
+    padding: 0 4% !important;
+    margin-bottom: 30px !important;
+  }
+  .section-title { font-size: 1.8rem !important; }
+  .section-desc { font-size: 0.9rem !important; }
+}
+
+/* ── Specialty ticker strip — reduce speed on mobile ── */
+@media (max-width: 768px) {
+  .specialty-strip .specialty-track {
+    animation-duration: 18s !important;
+  }
+  .strip-item {
+    font-size: 0.68rem !important;
+    padding: 0 18px !important;
+  }
+}
+
+/* ── Testimonials section mobile ── */
+@media (max-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .testimonial-card { padding: 24px 20px !important; }
+}
+
+/* ── Footer on mobile ── */
+@media (max-width: 768px) {
+  .footer-bottom {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 12px !important;
+  }
+  .footer-nav {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 16px !important;
+  }
+}
+
+/* ── General form improvements on mobile ── */
+@media (max-width: 768px) {
+  input, select, textarea {
+    font-size: 16px !important; /* Prevents iOS zoom on focus */
+  }
+}
+
+/* ── Smooth scrolling & iOS fixes ── */
+html {
+  -webkit-text-size-adjust: 100%;
+  touch-action: manipulation;
+}
+
