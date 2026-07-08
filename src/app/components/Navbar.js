@@ -183,16 +183,16 @@ export default function Navbar() {
           justify-content: space-between;
           padding: 0 4%;
           height: 70px;
-          background: rgba(8,8,10,0.5);
-          backdrop-filter: blur(16px);
-          -webkit-backdrop-filter: blur(16px);
-          border-bottom: 1px solid rgba(255,255,255,0.05);
+          background: rgba(8,8,10,0.85);
+          backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(20px);
+          border-bottom: 1px solid rgba(255,255,255,0.07);
           transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
         }
         .nb-scrolled {
-          background: rgba(8,8,10,0.95) !important;
-          border-color: rgba(255,255,255,0.1) !important;
-          box-shadow: 0 4px 30px rgba(0,0,0,0.4) !important;
+          background: rgba(8,8,10,0.98) !important;
+          border-color: rgba(255,255,255,0.12) !important;
+          box-shadow: 0 4px 30px rgba(0,0,0,0.5) !important;
         }
 
         /* ── Logo ── */
@@ -202,6 +202,8 @@ export default function Navbar() {
           flex-shrink: 0;
           text-decoration: none;
           transition: opacity 0.2s ease;
+          /* Drop shadow so white logo is visible on any bg */
+          filter: drop-shadow(0 1px 3px rgba(0,0,0,0.6));
         }
         .nb-logo:hover { opacity: 0.85; }
 
