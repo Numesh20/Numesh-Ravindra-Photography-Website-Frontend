@@ -209,18 +209,19 @@ export default function Navbar() {
         .nb-links {
           display: flex;
           align-items: center;
-          gap: 6px;
+          gap: 2px;
         }
         .nb-link {
           position: relative;
-          padding: 6px 14px;
-          font-size: 0.82rem;
+          padding: 6px 10px;
+          font-size: 0.78rem;
           font-weight: 600;
-          letter-spacing: 1.5px;
+          letter-spacing: 0.5px;
           text-transform: uppercase;
           color: rgba(255,255,255,0.6);
           text-decoration: none;
           transition: color 0.2s ease;
+          white-space: nowrap;
         }
         .nb-link:hover { color: #fff; }
         .nb-active { color: var(--accent) !important; }
@@ -236,8 +237,8 @@ export default function Navbar() {
         }
         .nb-link:hover .nb-link-line,
         .nb-active .nb-link-line {
-          left: 14px;
-          right: 14px;
+          left: 10px;
+          right: 10px;
         }
 
         /* ── Right Side ── */
