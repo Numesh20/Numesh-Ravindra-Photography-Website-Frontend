@@ -211,16 +211,16 @@ export default function Navbar() {
         .nb-links {
           display: flex;
           align-items: center;
-          gap: 2px;
+          gap: 24px;
         }
         .nb-link {
           position: relative;
-          padding: 6px 10px;
-          font-size: 0.78rem;
+          padding: 6px 4px;
+          font-size: 0.82rem;
           font-weight: 600;
-          letter-spacing: 0.5px;
+          letter-spacing: 1px;
           text-transform: uppercase;
-          color: rgba(255,255,255,0.6);
+          color: rgba(255,255,255,0.65);
           text-decoration: none;
           transition: color 0.2s ease;
           white-space: nowrap;
@@ -239,8 +239,8 @@ export default function Navbar() {
         }
         .nb-link:hover .nb-link-line,
         .nb-active .nb-link-line {
-          left: 10px;
-          right: 10px;
+          left: 4px;
+          right: 4px;
         }
 
         /* ── Right Side ── */
