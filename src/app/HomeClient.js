@@ -311,12 +311,13 @@ export default function HomeClient() {
           line-height: 1.1;
         }
         .hero-name {
-          font-size: clamp(2.8rem, 7vw, 6rem);
+          font-size: clamp(1.6rem, 5.5vw, 6rem);
           font-weight: 200;
           letter-spacing: 0.08em;
           text-transform: uppercase;
           color: #fff;
           display: block;
+          white-space: nowrap;
         }
         .hero-title-line2 {
           font-size: clamp(1.4rem, 3.5vw, 2.8rem);
