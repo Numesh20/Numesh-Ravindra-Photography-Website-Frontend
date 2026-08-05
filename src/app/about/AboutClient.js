@@ -161,7 +161,7 @@ export default function AboutClient() {
               </div>
               <div className="ap-stat-divider" />
               <div className="ap-stat">
-                <span className="ap-stat-num">500+</span>
+                <span className="ap-stat-num">50+</span>
                 <span className="ap-stat-label">Clients</span>
               </div>
               <div className="ap-stat-divider" />

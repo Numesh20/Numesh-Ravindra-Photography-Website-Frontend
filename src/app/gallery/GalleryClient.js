@@ -50,8 +50,8 @@ export default function GalleryClient() {
         {/* Albums Grid */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          gap: '30px'
+          gridTemplateColumns: 'repeat(2, 1fr)',
+          gap: '32px'
         }}>
           {ALBUMS.map((album) => (
             <Link
