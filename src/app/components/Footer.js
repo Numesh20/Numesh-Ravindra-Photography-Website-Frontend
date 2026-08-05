@@ -152,19 +152,19 @@ export default function Footer() {
             <h4 className="ft-col-title">Get in Touch</h4>
             <ul className="ft-contact-list">
               <li>
-                <span className="ft-contact-icon">📍</span>
+                <span className="ft-contact-icon"></span>
                 <span>Mawanella, Kegalle<br />Sri Lanka 71500</span>
               </li>
               <li>
-                <span className="ft-contact-icon">📞</span>
+                <span className="ft-contact-icon"></span>
                 <a href="tel:+94704574568" className="ft-link">+94 70 457 4568</a>
               </li>
               <li>
-                <span className="ft-contact-icon">💬</span>
+                <span className="ft-contact-icon"></span>
                 <a href="https://wa.me/94704574568" target="_blank" rel="noopener noreferrer" className="ft-link">WhatsApp Chat</a>
               </li>
               <li>
-                <span className="ft-contact-icon">🕐</span>
+                <span className="ft-contact-icon"></span>
                 <span>Available 7 days a week</span>
               </li>
             </ul>
