@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
 import MobileActionBar from "./components/MobileActionBar";
+import SplashScreen from "./components/SplashScreen";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -68,6 +69,7 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <SplashScreen />
         <Navbar />
         {children}
         <Footer />
