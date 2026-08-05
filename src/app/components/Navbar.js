@@ -130,7 +130,7 @@ export default function Navbar() {
         {/* Mobile Footer */}
         <div className="nb-mobile-footer">
           <Link href="/contact" className="nb-mobile-cta" onClick={() => setMenuOpen(false)}>
-            📸 Book a Session
+             Book a Session
           </Link>
           <div className="nb-mobile-socials">
             <a href="https://wa.me/94704574568" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
@@ -149,7 +149,7 @@ export default function Navbar() {
               </svg>
             </a>
           </div>
-          <p className="nb-mobile-location">📍 Mawanella, Sri Lanka · Available Island-wide</p>
+          <p className="nb-mobile-location"> Mawanella, Sri Lanka · Available Island-wide</p>
         </div>
       </div>
 
