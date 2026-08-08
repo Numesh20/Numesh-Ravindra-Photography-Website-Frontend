@@ -31,6 +31,12 @@ export const metadata = {
     locale: "en_LK",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Photography Albums & Gallery | Numesh Ravindra Photography",
+    description: "Browse wedding albums, portrait collections, event photos & wildlife gallery from Numesh Ravindra Photography in Sri Lanka.",
+    images: ["https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&h=630&q=80"],
+  },
 };
 
 export default function GalleryPage() {

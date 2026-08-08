@@ -130,7 +130,7 @@ export default function ContactClient() {
           </p>
           <div className="cp-hero-badges">
             <span className="cp-badge">✅ Responds within 24 hrs</span>
-            <span className="cp-badge">📅 Bookings Open 2025</span>
+            <span className="cp-badge">📅 Bookings Open 2026</span>
             <span className="cp-badge">🚗 Travel Island-wide</span>
           </div>
         </div>

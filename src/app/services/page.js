@@ -16,8 +16,22 @@ export const metadata = {
     description: "Explore photography service pricing packages in Sri Lanka. Tailored options for weddings, professional event coverage, outdoor/studio portrait sessions, and wildlife prints.",
     url: "https://numesh-ravindra-photography-website.vercel.app/services",
     siteName: "Numesh Ravindra Photography",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&h=630&q=80",
+        width: 1200,
+        height: 630,
+        alt: "Photography Services & Pricing — Numesh Ravindra Photography",
+      },
+    ],
     locale: "en_LK",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Photography Services & Pricing | Numesh Ravindra Photography",
+    description: "Wedding, portrait, event & wildlife photography packages in Sri Lanka. Based in Mawanella, available island-wide.",
+    images: ["https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&h=630&q=80"],
   },
 };
 

@@ -19,7 +19,7 @@ export const metadata = {
   },
   openGraph: {
     title: "Numesh Ravindra Photography | Portfolio",
-    description: "TIMELLES WEDDINGS, PORTRAITS, EVENTS & WILDLIFE PHOTOGRAPHY BASED IN SRI LANKA.",
+    description: "TIMELESS WEDDINGS, PORTRAITS, EVENTS & WILDLIFE PHOTOGRAPHY BASED IN SRI LANKA.",
     url: "https://numesh-ravindra-photography-website.vercel.app",
     siteName: "Numesh Ravindra Photography",
     images: [
@@ -32,6 +32,12 @@ export const metadata = {
     ],
     locale: "en_LK",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Numesh Ravindra Photography | Professional Photographer in Sri Lanka",
+    description: "Timeless weddings, portraits, events & wildlife photography based in Mawanella, Sri Lanka.",
+    images: ["https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&h=630&q=80"],
   },
 };
 
