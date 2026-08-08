@@ -26,7 +26,7 @@ const ALBUM_META = {
 export async function generateMetadata({ params }) {
   const resolvedParams = await params;
   const albumSlug = resolvedParams.album;
-  const BASE_URL = "https://numesh-ravindra-photography-website.vercel.app";
+  const BASE_URL = "https://www.numeshravindra.me";
   const meta = ALBUM_META[albumSlug] || {
     title: "Photo Album",
     description: "View curated photography collections and photo shoots by Numesh Ravindra in Sri Lanka.",

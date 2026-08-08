@@ -13,12 +13,12 @@ export const metadata = {
     "Mawanella photography albums"
   ],
   alternates: {
-    canonical: "https://numesh-ravindra-photography-website.vercel.app/gallery",
+    canonical: "https://www.numeshravindra.me/gallery",
   },
   openGraph: {
     title: "Photography Albums & Gallery | Numesh Ravindra Photography",
     description: "Browse through Numesh Ravindra's photography albums. Capturing stunning weddings, beautiful portraits, professional events, and breathtaking wildlife in Sri Lanka.",
-    url: "https://numesh-ravindra-photography-website.vercel.app/gallery",
+    url: "https://www.numeshravindra.me/gallery",
     siteName: "Numesh Ravindra Photography",
     images: [
       {

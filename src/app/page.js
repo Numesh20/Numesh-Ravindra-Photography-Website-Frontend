@@ -15,12 +15,12 @@ export const metadata = {
     "Best Photographer Sri Lanka"
   ],
   alternates: {
-    canonical: "https://numesh-ravindra-photography-website.vercel.app",
+    canonical: "https://www.numeshravindra.me",
   },
   openGraph: {
     title: "Numesh Ravindra Photography | Portfolio",
     description: "TIMELESS WEDDINGS, PORTRAITS, EVENTS & WILDLIFE PHOTOGRAPHY BASED IN SRI LANKA.",
-    url: "https://numesh-ravindra-photography-website.vercel.app",
+    url: "https://www.numeshravindra.me",
     siteName: "Numesh Ravindra Photography",
     images: [
       {

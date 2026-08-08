@@ -9,12 +9,12 @@ export const metadata = {
     "Photography services pricing"
   ],
   alternates: {
-    canonical: "https://numesh-ravindra-photography-website.vercel.app/services",
+    canonical: "https://www.numeshravindra.me/services",
   },
   openGraph: {
     title: "Photography Services & Pricing Packages | Numesh Ravindra Photography",
     description: "Explore photography service pricing packages in Sri Lanka. Tailored options for weddings, professional event coverage, outdoor/studio portrait sessions, and wildlife prints.",
-    url: "https://numesh-ravindra-photography-website.vercel.app/services",
+    url: "https://www.numeshravindra.me/services",
     siteName: "Numesh Ravindra Photography",
     images: [
       {

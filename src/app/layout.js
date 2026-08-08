@@ -19,8 +19,8 @@ export default function RootLayout({ children }) {
     "@type": "LocalBusiness",
     "name": "Numesh Ravindra Photography",
     "image": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80",
-    "@id": "https://numesh-ravindra-photography-website.vercel.app/#organization",
-    "url": "https://numesh-ravindra-photography-website.vercel.app",
+    "@id": "https://www.numeshravindra.me/#organization",
+    "url": "https://www.numeshravindra.me",
     "telephone": "+94704574568",
     "priceRange": "$$",
     "address": {

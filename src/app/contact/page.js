@@ -51,12 +51,12 @@ export const metadata = {
     "Photography pricing Sri Lanka"
   ],
   alternates: {
-    canonical: "https://numesh-ravindra-photography-website.vercel.app/contact",
+    canonical: "https://www.numeshravindra.me/contact",
   },
   openGraph: {
     title: "Contact & Book a Session | Numesh Ravindra Photography",
     description: "Get in touch with Numesh Ravindra to book your wedding, portrait, wildlife, or event photography session in Sri Lanka. Responds within 24 hours.",
-    url: "https://numesh-ravindra-photography-website.vercel.app/contact",
+    url: "https://www.numeshravindra.me/contact",
     siteName: "Numesh Ravindra Photography",
     images: [
       {

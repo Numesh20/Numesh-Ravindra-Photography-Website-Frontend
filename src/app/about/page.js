@@ -11,12 +11,12 @@ export const metadata = {
     "Sony Alfa A7 III photographer"
   ],
   alternates: {
-    canonical: "https://numesh-ravindra-photography-website.vercel.app/about",
+    canonical: "https://www.numeshravindra.me/about",
   },
   openGraph: {
     title: "About Numesh Ravindra | Professional Photographer Sri Lanka",
     description: "Learn more about Numesh Ravindra, a professional photographer based in Mawanella, Sri Lanka.",
-    url: "https://numesh-ravindra-photography-website.vercel.app/about",
+    url: "https://www.numeshravindra.me/about",
     siteName: "Numesh Ravindra Photography",
     images: [
       {

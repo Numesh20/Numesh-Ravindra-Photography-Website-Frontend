@@ -1,5 +1,5 @@
 export default async function sitemap() {
-  const baseUrl = 'https://numesh-ravindra-photography-website.vercel.app';
+  const baseUrl = 'https://www.numeshravindra.me';
 
   const staticPages = [
     '',

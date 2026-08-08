@@ -4,6 +4,6 @@ export default function robots() {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://numesh-ravindra-photography-website.vercel.app/sitemap.xml',
+    sitemap: 'https://www.numeshravindra.me/sitemap.xml',
   };
 }
