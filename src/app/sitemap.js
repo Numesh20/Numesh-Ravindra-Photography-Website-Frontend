@@ -2,28 +2,29 @@ export default async function sitemap() {
   const baseUrl = 'https://www.numeshravindra.me';
 
   const staticPages = [
-    '',
-    '/about',
-    '/services',
-    '/contact',
-    '/gallery'
-  ].map(route => ({
+    { route: '',          priority: 1.0,  freq: 'weekly'  },
+    { route: '/gallery',  priority: 0.9,  freq: 'weekly'  },
+    { route: '/services', priority: 0.9,  freq: 'monthly' },
+    { route: '/booking',  priority: 0.9,  freq: 'monthly' },
+    { route: '/about',    priority: 0.7,  freq: 'monthly' },
+    { route: '/contact',  priority: 0.7,  freq: 'monthly' },
+  ].map(({ route, priority, freq }) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
-    changeFrequency: 'weekly',
-    priority: route === '' ? 1.0 : 0.8
+    changeFrequency: freq,
+    priority,
   }));
 
   const albums = [
     'anu-karunathilaka',
     'manavi-photo-shoot',
     'savindi-edit',
-    'amandi-edit'
+    'amandi-edit',
   ].map(album => ({
     url: `${baseUrl}/gallery/${album}`,
     lastModified: new Date(),
     changeFrequency: 'monthly',
-    priority: 0.6
+    priority: 0.6,
   }));
 
   return [...staticPages, ...albums];

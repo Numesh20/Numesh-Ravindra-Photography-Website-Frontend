@@ -10,20 +10,82 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Numesh Ravindra Photography | Portfolio",
-  description: "Explore the photography portfolio of Numesh Ravindra in Mawanella, Sri Lanka. Specializing in wedding, wildlife, event, and portrait photography.",
+  metadataBase: new URL('https://www.numeshravindra.me'),
+  title: {
+    default: "Numesh Ravindra Photography | Wedding & Portrait Photographer Sri Lanka",
+    template: "%s | Numesh Ravindra Photography",
+  },
+  description: "Professional photographer in Mawanella, Sri Lanka specializing in wedding, portrait, wildlife & event photography. 50+ happy clients. Available island-wide. Book your session today!",
+  keywords: [
+    "photographer in Sri Lanka",
+    "wedding photographer Sri Lanka",
+    "wedding photographer Mawanella",
+    "portrait photographer Sri Lanka",
+    "event photographer Kandy",
+    "wildlife photographer Sri Lanka",
+    "professional photographer Kegalle",
+    "photography packages Sri Lanka",
+    "Numesh Ravindra Photography",
+    "best photographer Sri Lanka",
+    "affordable wedding photography Sri Lanka",
+    "outdoor photoshoot Sri Lanka",
+  ],
+  authors: [{ name: 'Numesh Ravindra', url: 'https://www.numeshravindra.me' }],
+  creator: 'Numesh Ravindra',
+  publisher: 'Numesh Ravindra Photography',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_LK',
+    url: 'https://www.numeshravindra.me',
+    siteName: 'Numesh Ravindra Photography',
+    title: 'Numesh Ravindra Photography | Wedding & Portrait Photographer Sri Lanka',
+    description: 'Professional photographer in Mawanella, Sri Lanka. Specializing in weddings, portraits, wildlife & events. Available island-wide. Book now!',
+    images: [{
+      url: '/og-image.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Numesh Ravindra Photography — Professional Photographer Sri Lanka',
+    }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Numesh Ravindra Photography | Sri Lanka',
+    description: 'Professional wedding, portrait & wildlife photographer. Based in Mawanella, available island-wide across Sri Lanka.',
+    images: ['/og-image.jpg'],
+  },
+  alternates: {
+    canonical: 'https://www.numeshravindra.me',
+  },
 };
 
 export default function RootLayout({ children }) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "ProfessionalService"],
     "name": "Numesh Ravindra Photography",
+    "description": "Professional photographer in Mawanella, Sri Lanka specializing in wedding, portrait, wildlife and event photography. Available island-wide.",
     "image": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80",
     "@id": "https://www.numeshravindra.me/#organization",
     "url": "https://www.numeshravindra.me",
     "telephone": "+94704574568",
-    "priceRange": "$$",
+    "email": "numesh.ravindra.photography@gmail.com",
+    "priceRange": "Rs. 8,000 - Rs. 150,000",
+    "currenciesAccepted": "LKR",
+    "paymentAccepted": "Cash, Bank Transfer",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Sri Lanka"
+    },
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Mawanella",
@@ -37,17 +99,19 @@ export default function RootLayout({ children }) {
       "latitude": 7.2513,
       "longitude": 80.4437
     },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Photography Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wedding Photography", "description": "Full day wedding photography coverage" }, "priceSpecification": { "@type": "PriceSpecification", "price": "100000", "priceCurrency": "LKR" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Portrait Session", "description": "Studio and outdoor portrait photography" }, "priceSpecification": { "@type": "PriceSpecification", "price": "8000", "priceCurrency": "LKR" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Event Coverage", "description": "Professional event photography" }, "priceSpecification": { "@type": "PriceSpecification", "price": "25000", "priceCurrency": "LKR" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Outdoor / Lifestyle Photography", "description": "Natural outdoor lifestyle photography" }, "priceSpecification": { "@type": "PriceSpecification", "price": "12000", "priceCurrency": "LKR" } }
+      ]
+    },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday"
-      ],
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
       "opens": "00:00",
       "closes": "23:59"
     },
@@ -59,7 +123,9 @@ export default function RootLayout({ children }) {
       "Wedding Photography",
       "Wildlife Photography",
       "Portrait Photography",
-      "Event Photography"
+      "Event Photography",
+      "Outdoor Lifestyle Photography",
+      "Corporate Photography"
     ]
   };
 
