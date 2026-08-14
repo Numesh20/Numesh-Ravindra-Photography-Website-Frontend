@@ -31,7 +31,14 @@ const ALBUMS = [
     description: "A beautiful curated photography collection.",
     cover: "/gallery/portraits/amandi%20Edit/10.jpg",
     count: 22,
-  }
+  },
+  {
+    slug: "sathya-birthday-shoot",
+    title: "Sathya Birthday Shoot",
+    description: "A vibrant and joyful birthday photography session.",
+    cover: "/gallery/portraits/Sathya%20Birthday%20shoot/1%20(1).jpg",
+    count: 20,
+  },
 ];
 
 export default function GalleryClient() {

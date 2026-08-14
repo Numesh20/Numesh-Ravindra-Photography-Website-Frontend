@@ -120,6 +120,34 @@ const ALBUM_DATA = {
       { id: 21, filename: "210.jpg" },
       { id: 22, filename: "220.jpg" },
     ]
+  },
+  "sathya-birthday-shoot": {
+    title: "Sathya Birthday Shoot",
+    folder: "Sathya Birthday shoot",
+    description: "A vibrant and joyful birthday photography session.",
+    icon: "🎂",
+    photos: [
+      { id: 1,  filename: "1 (1).jpg" },
+      { id: 2,  filename: "1 (2).jpg" },
+      { id: 3,  filename: "1 (3).jpg" },
+      { id: 4,  filename: "1 (4).jpg" },
+      { id: 5,  filename: "1 (5).jpg" },
+      { id: 6,  filename: "1 (6).jpg" },
+      { id: 7,  filename: "1 (7).jpg" },
+      { id: 8,  filename: "1 (8).jpg" },
+      { id: 9,  filename: "1 (9).jpg" },
+      { id: 10, filename: "1 (10).jpg" },
+      { id: 11, filename: "1 (11).jpg" },
+      { id: 12, filename: "1 (12).jpg" },
+      { id: 13, filename: "1 (13).jpg" },
+      { id: 14, filename: "1 (14).jpg" },
+      { id: 15, filename: "1 (15).jpg" },
+      { id: 16, filename: "1 (16).jpg" },
+      { id: 17, filename: "1 (17).jpg" },
+      { id: 18, filename: "1 (18).jpg" },
+      { id: 19, filename: "1 (19).jpg" },
+      { id: 20, filename: "1 (20).jpg" },
+    ]
   }
 };
 

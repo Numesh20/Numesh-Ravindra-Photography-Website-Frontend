@@ -20,6 +20,7 @@ export default async function sitemap() {
     'manavi-photo-shoot',
     'savindi-edit',
     'amandi-edit',
+    'sathya-birthday-shoot',
   ].map(album => ({
     url: `${baseUrl}/gallery/${album}`,
     lastModified: new Date(),
