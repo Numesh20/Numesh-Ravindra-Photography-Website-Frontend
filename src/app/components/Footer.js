@@ -184,7 +184,7 @@ export default function Footer() {
             <span className="ft-dot">·</span>
             <Link href="/about" className="ft-bottom-link">About</Link>
           </div>
-          <p className="ft-made">Made with ❤️ in Sri Lanka</p>
+          <p className="ft-made">Crafted with care in Sri Lanka</p>
         </div>
       </div>
 

@@ -125,7 +125,7 @@ const ALBUM_DATA = {
     title: "Sathya Birthday Shoot",
     folder: "Sathya Birthday shoot",
     description: "A vibrant and joyful birthday photography session.",
-    icon: "🎂",
+    icon: "",
     photos: [
       { id: 1,  filename: "1 (1).jpg" },
       { id: 2,  filename: "1 (2).jpg" },
@@ -294,10 +294,10 @@ export default function AlbumClient({ albumSlug }) {
                   Photo {lightboxIndex + 1} of {album.photos.length}
                 </p>
                 <p style={{ color: 'var(--text-muted)', fontSize: '0.82rem', marginTop: '6px' }}>
-                  📍 Sri Lanka
+                   Sri Lanka
                 </p>
                 <p style={{ color: 'var(--text-muted)', fontSize: '0.82rem', marginTop: '4px' }}>
-                  📷 Sony Alfa A7 III
+                   Sony Alfa A7 III
                 </p>
               </div>
               <div className="lightbox-footer">

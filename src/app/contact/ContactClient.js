@@ -129,9 +129,9 @@ export default function ContactClient() {
             Book a session, ask a question, or just say hello — I'd love to hear from you.
           </p>
           <div className="cp-hero-badges">
-            <span className="cp-badge">✅ Responds within 24 hrs</span>
-            <span className="cp-badge">📅 Bookings Open 2026</span>
-            <span className="cp-badge">🚗 Travel Island-wide</span>
+            <span className="cp-badge"> Responds within 24 hrs</span>
+            <span className="cp-badge"> Bookings Open 2026</span>
+            <span className="cp-badge"> Travel Island-wide</span>
           </div>
         </div>
       </section>
@@ -271,11 +271,11 @@ export default function ContactClient() {
                     value={formData.type}
                     onChange={(e) => setFormData({ ...formData, type: e.target.value })}
                   >
-                    <option value="Wedding Photography">💍 Wedding Photography</option>
-                    <option value="Portrait Session">🎭 Portrait Session</option>
-                    <option value="Event Coverage">🎉 Event Coverage</option>
-                    <option value="Wildlife Prints & Sessions">🦁 Wildlife Prints & Sessions</option>
-                    <option value="Other">💬 Other Inquiry</option>
+                    <option value="Wedding Photography"> Wedding Photography</option>
+                    <option value="Portrait Session"> Portrait Session</option>
+                    <option value="Event Coverage"> Event Coverage</option>
+                    <option value="Wildlife Prints & Sessions"> Wildlife Prints & Sessions</option>
+                    <option value="Other"> Other Inquiry</option>
                   </select>
                 </div>
                 <div className="cp-field">
@@ -312,7 +312,7 @@ export default function ContactClient() {
               </button>
 
               <p className="cp-form-note">
-                🔒 Your information is kept private and never shared.
+                Your information is kept private and never shared.
               </p>
             </form>
           )}
@@ -367,7 +367,7 @@ export default function ContactClient() {
             title="Numesh Ravindra Photography - Mawanella Location"
           ></iframe>
           <div className="cp-map-footer">
-            <span>📷 Studio & outdoor sessions available in Mawanella</span>
+            <span>Studio & outdoor sessions available in Mawanella</span>
             <a href="https://maps.google.com/?q=Mawanella,+Sri+Lanka" target="_blank" rel="noopener noreferrer">
               Open in Google Maps →
             </a>

@@ -4,32 +4,32 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 const STATS = [
-  { value: 3,   suffix: "+", label: "Years of Experience",   icon: "📅", desc: "Capturing moments since 2022" },
-  { value: 50,  suffix: "+", label: "Happy Clients",          icon: "🤝", desc: "Trusted by families & couples" },
-  { value: 104, suffix: "+", label: "Photos in Portfolio",    icon: "📸", desc: "Across 5 curated albums" },
-  { value: 15,  suffix: "+", label: "Events Covered",         icon: "🎉", desc: "Weddings, birthdays & more" },
-  { value: 100, suffix: "%", label: "Client Satisfaction",    icon: "⭐", desc: "5-star rated service" },
-  { value: 9,   suffix: "",  label: "Districts Covered",      icon: "📍", desc: "Available island-wide in Sri Lanka" },
+  { value: 3,   suffix: "+", label: "Years of Experience",   icon: null, desc: "Capturing moments since 2022" },
+  { value: 50,  suffix: "+", label: "Happy Clients",          icon: null, desc: "Trusted by families & couples" },
+  { value: 104, suffix: "+", label: "Photos in Portfolio",    icon: null, desc: "Across 5 curated albums" },
+  { value: 15,  suffix: "+", label: "Events Covered",         icon: null, desc: "Weddings, birthdays & more" },
+  { value: 100, suffix: "%", label: "Client Satisfaction",    icon: null, desc: "5-star rated service" },
+  { value: 9,   suffix: "",  label: "Districts Covered",      icon: null, desc: "Available island-wide in Sri Lanka" },
 ];
 
 const ACHIEVEMENTS = [
   {
-    icon: "💍",
+    icon: "",
     title: "Wedding Specialist",
     desc: "Delivered stunning wedding albums with full-day coverage and premium photobooks for couples across Sri Lanka.",
   },
   {
-    icon: "🌿",
+    icon: "",
     title: "Island-Wide Coverage",
     desc: "Traveled to 9+ districts — from Colombo to Galle, Kandy to Jaffna — to capture your most important moments.",
   },
   {
-    icon: "🎯",
+    icon: "",
     title: "Fast Turnaround",
     desc: "Wedding highlights delivered within 3 days. Full gallery within 4-6 weeks. Always on time, every time.",
   },
   {
-    icon: "🏆",
+    icon: "",
     title: "Professional Equipment",
     desc: "Shooting with Sony Alpha A7 III full-frame camera for sharp, high-resolution images in any lighting condition.",
   },
@@ -73,7 +73,7 @@ export default function StatsSection() {
 
       {/* ── Stats Grid ── */}
       <div className="ss-header animate-fade-in">
-        <span className="ss-tag">📊 By The Numbers</span>
+        <span className="ss-tag">By The Numbers</span>
         <h2 className="section-title">Achievements &amp; Stats</h2>
         <p className="section-desc">
           Every number tells a story — here's what 3+ years of passion and dedication looks like.
@@ -95,7 +95,7 @@ export default function StatsSection() {
 
       {/* ── Achievements ── */}
       <div className="ss-achieve-wrap animate-fade-in">
-        <span className="ss-tag">🏅 Why Choose Me</span>
+        <span className="ss-tag">Why Choose Me</span>
         <h2 className="section-title" style={{ marginBottom: '48px' }}>What Sets Me Apart</h2>
         <div className="ss-achieve-grid">
           {ACHIEVEMENTS.map((a, i) => (
@@ -111,7 +111,7 @@ export default function StatsSection() {
       {/* ── CTA Strip ── */}
       <div className="ss-cta animate-fade-in">
         <p className="ss-cta-text">Ready to create beautiful memories together?</p>
-        <Link href="/booking" className="ss-cta-btn">📅 Book Your Session</Link>
+        <Link href="/booking" className="ss-cta-btn">Book Your Session</Link>
       </div>
 
       <style jsx>{`

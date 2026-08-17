@@ -11,7 +11,7 @@ const PUBLIC_KEY  = "4adMArwJqy9jB6J5D";
 const SERVICES = [
   {
     id: "wedding",
-    icon: "💍",
+    icon: "",
     title: "Wedding Photography",
     desc: "Full day or half day wedding coverage",
     packages: [
@@ -22,21 +22,21 @@ const SERVICES = [
   },
   {
     id: "portrait",
-    icon: "🤳",
+    icon: "",
     title: "Portrait Session",
     desc: "Studio or outdoor portrait photography",
     packages: [{ label: "Portrait Session – Rs. 8,000", value: "Portrait Session (Rs. 8,000)" }],
   },
   {
     id: "event",
-    icon: "🎉",
+    icon: "",
     title: "Event Coverage",
     desc: "Up to 4 hours of professional event photography",
     packages: [{ label: "Event Coverage – Rs. 25,000", value: "Event Coverage (Rs. 25,000)" }],
   },
   {
     id: "outdoor",
-    icon: "🌿",
+    icon: "",
     title: "Outdoor / Lifestyle",
     desc: "Natural lifestyle photography in scenic locations",
     packages: [{ label: "Outdoor/Lifestyle – Rs. 12,000", value: "Outdoor/Lifestyle (Rs. 12,000)" }],
@@ -91,7 +91,7 @@ export default function BookingClient() {
           time: form.time || "Flexible",
           location: form.location,
           notes: form.notes || "None",
-          message: `📅 NEW BOOKING REQUEST\n\nService: ${service?.title}\nPackage: ${selectedPackage}\nDate: ${form.date}\nTime: ${form.time || "Flexible"}\nLocation: ${form.location}\nNotes: ${form.notes || "None"}\n\nClient: ${form.name}\nPhone: ${form.phone}\nEmail: ${form.email}`,
+          message: ` NEW BOOKING REQUEST\n\nService: ${service?.title}\nPackage: ${selectedPackage}\nDate: ${form.date}\nTime: ${form.time || "Flexible"}\nLocation: ${form.location}\nNotes: ${form.notes || "None"}\n\nClient: ${form.name}\nPhone: ${form.phone}\nEmail: ${form.email}`,
         },
         PUBLIC_KEY
       );
@@ -107,13 +107,13 @@ export default function BookingClient() {
     return (
       <div className="bk-root">
         <div className="bk-success animate-fade-in">
-          <div className="bk-success-icon">🎉</div>
+          <div className="bk-success-icon"></div>
           <h1 className="bk-success-title">Booking Request Sent!</h1>
           <p className="bk-success-sub">
             Thank you <strong>{form.name}</strong>! Your booking request for{" "}
             <strong>{service?.title}</strong> on <strong>{form.date}</strong> has been received.
             <br /><br />
-            I'll get back to you within <strong>24 hours</strong> to confirm your session. 📸
+            I'll get back to you within <strong>24 hours</strong> to confirm your session.
           </p>
           <div className="bk-success-details">
             <div className="bk-success-row"><span>Service</span><strong>{service?.title}</strong></div>
@@ -124,7 +124,7 @@ export default function BookingClient() {
           <div className="bk-success-btns">
             <Link href="/" className="bk-btn-primary">Back to Home</Link>
             <a href="https://wa.me/94704574568" target="_blank" rel="noopener noreferrer" className="bk-btn-secondary">
-              💬 WhatsApp Me
+              WhatsApp Me
             </a>
           </div>
         </div>
@@ -342,7 +342,7 @@ export default function BookingClient() {
                 </div>
               </div>
               <p className="bk-note">
-                📩 After submitting, I will confirm your booking within <strong>24 hours</strong> via phone or email.
+                After submitting, I will confirm your booking within <strong>24 hours</strong> via phone or email.
                 A <strong>30% advance deposit</strong> is required to secure your date.
               </p>
               {error && <p className="bk-error">{error}</p>}
@@ -370,7 +370,7 @@ export default function BookingClient() {
                 onClick={handleSubmit}
                 disabled={submitting}
               >
-                {submitting ? "Sending…" : "✅ Submit Booking Request"}
+                {submitting ? "Sending…" : " Submit Booking Request"}
               </button>
             )}
           </div>

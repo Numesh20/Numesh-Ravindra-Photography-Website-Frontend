@@ -139,12 +139,12 @@ export default function ServicesClient() {
           </h1>
           <p className="sp-hero-sub">
             Professional photography packages tailored for your special moments.<br />
-            Based in Mawanella · Available island-wide across Sri Lanka 🇱🇰
+            Based in Mawanella · Available island-wide across Sri Lanka
           </p>
           <div className="sp-hero-badges">
-            <span className="sp-badge">✅ Island-wide Travel</span>
-            <span className="sp-badge">📸 50+ Happy Clients</span>
-            <span className="sp-badge">⭐ 3+ Years Experience</span>
+            <span className="sp-badge"> Island-wide Travel</span>
+            <span className="sp-badge"> 50+ Happy Clients</span>
+            <span className="sp-badge"> 3+ Years Experience</span>
           </div>
         </div>
       </section>
@@ -152,7 +152,7 @@ export default function ServicesClient() {
       {/* ── Wedding Packages ── */}
       <section className="sp-section">
         <div className="sp-section-head animate-fade-in">
-          <span className="sp-tag">💍 Weddings</span>
+          <span className="sp-tag"> Weddings</span>
           <h2 className="section-title">Wedding Photography Packages</h2>
           <p className="section-desc">
             Choose the perfect package for your dream wedding day. All packages include professionally edited photos delivered via private online gallery.
@@ -194,7 +194,7 @@ export default function ServicesClient() {
       {/* ── Other Services ── */}
       <section className="sp-section sp-section-alt">
         <div className="sp-section-head animate-fade-in">
-          <span className="sp-tag">📷 Other Services</span>
+          <span className="sp-tag"> Other Services</span>
           <h2 className="section-title">More Photography Services</h2>
           <p className="section-desc">
             From portraits to corporate shoots — professional photography for every occasion.
@@ -237,10 +237,10 @@ export default function ServicesClient() {
           </p>
           <div className="sp-cta-btns">
             <Link href="/contact" className="sp-cta-primary">
-              📩 Book a Session
+              Book a Session
             </Link>
             <a href="https://wa.me/94704574568" target="_blank" rel="noopener noreferrer" className="sp-cta-secondary">
-              💬 WhatsApp Me
+              WhatsApp Me
             </a>
           </div>
         </div>
