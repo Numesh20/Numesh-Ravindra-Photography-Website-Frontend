@@ -72,9 +72,11 @@ export default function GalleryClient() {
                     src={album.cover}
                     alt={album.title}
                     fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    sizes="(max-width: 640px) 100vw, 50vw"
                     style={{ objectFit: 'cover' }}
                     className="album-cover-img"
+                    quality={75}
+                    priority={ALBUMS.indexOf(album) < 2}
                   />
                   <div className="album-overlay">
                     <span className="album-view-btn">View Album →</span>

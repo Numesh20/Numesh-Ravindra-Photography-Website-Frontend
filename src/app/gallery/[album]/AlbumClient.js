@@ -233,9 +233,12 @@ export default function AlbumClient({ albumSlug }) {
                 src={getPhotoSrc(album.folder, photo.filename)}
                 alt={`${album.title} - Photo ${photo.id}`}
                 fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 style={{ objectFit: 'cover' }}
                 className="album-photo-img"
+                quality={80}
+                priority={index < 4}
+                loading={index < 4 ? 'eager' : 'lazy'}
               />
               <div className="album-photo-overlay">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
