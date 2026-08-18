@@ -6,6 +6,7 @@ export default async function sitemap() {
     { route: '/gallery',  priority: 0.9,  freq: 'weekly'  },
     { route: '/services', priority: 0.9,  freq: 'monthly' },
     { route: '/booking',  priority: 0.9,  freq: 'monthly' },
+    { route: '/blog',     priority: 0.85, freq: 'weekly'  },
     { route: '/about',    priority: 0.7,  freq: 'monthly' },
     { route: '/contact',  priority: 0.7,  freq: 'monthly' },
   ].map(({ route, priority, freq }) => ({
@@ -28,5 +29,17 @@ export default async function sitemap() {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...albums];
+  const blogPosts = [
+    'best-wedding-venues-sri-lanka-photography',
+    'how-to-prepare-portrait-photography-session',
+    'wildlife-photography-sri-lanka-guide',
+    'why-hire-professional-photographer-wedding-sri-lanka',
+  ].map(slug => ({
+    url: `${baseUrl}/blog/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }));
+
+  return [...staticPages, ...albums, ...blogPosts];
 }
