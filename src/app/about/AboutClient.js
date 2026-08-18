@@ -103,7 +103,7 @@ export default function AboutClient() {
       <section className="ap-hero">
         <div className="ap-hero-bg" />
         <div className="ap-hero-content">
-          <p className="ap-hero-eyebrow">✦ The Story Behind the Lens</p>
+          <p className="ap-hero-eyebrow">The Story Behind the Lens</p>
           <h1 className="ap-hero-title">The Photographer</h1>
           <p className="ap-hero-sub">Behind the lens and the creative philosophy.</p>
         </div>
@@ -166,12 +166,12 @@ export default function AboutClient() {
               </div>
               <div className="ap-stat-divider" />
               <div className="ap-stat">
-                <span className="ap-stat-num">84+</span>
+                <span className="ap-stat-num">104+</span>
                 <span className="ap-stat-label">Photos</span>
               </div>
               <div className="ap-stat-divider" />
               <div className="ap-stat">
-                <span className="ap-stat-num">4</span>
+                <span className="ap-stat-num">5</span>
                 <span className="ap-stat-label">Albums</span>
               </div>
             </div>
