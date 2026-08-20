@@ -34,7 +34,14 @@ const ALBUMS = [
     description: "A beautiful curated photography collection.",
     cover: "/gallery/portraits/amandi%20Edit/10.jpg",
     count: 22,
-  }
+  },
+  {
+    slug: "sathya-birthday-shoot",
+    title: "Sathya Birthday Shoot",
+    description: "A vibrant and joyful birthday photography session.",
+    cover: "/gallery/portraits/Sathya%20Birthday%20shoot/1%20(1).jpg",
+    count: 20,
+  },
 ];
 
 const SPECIALTIES = ["Weddings", "Wildlife", "Portraits", "Events"];
@@ -540,10 +547,18 @@ export default function HomeClient() {
         .albums-grid {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-          gap: 28px;
+          gap: 24px;
           padding: 0 4%;
           max-width: 1300px;
           margin: 0 auto;
+        }
+        @media (max-width: 640px) {
+          .albums-grid {
+            grid-template-columns: 1fr;
+            gap: 16px;
+            padding: 0 5%;
+          }
+          .album-cover { height: 220px; }
         }
         .album-card {
           background: rgba(255,255,255,0.04);
@@ -626,11 +641,13 @@ export default function HomeClient() {
         /* ── Responsive ── */
         @media (max-width: 640px) {
           .hero-badges { padding: 14px 16px; }
-          .hero-badge { padding: 0 14px; }
-          .hb-num { font-size: 1.3rem; }
-          .hero-ctas { flex-direction: column; align-items: center; }
+          .hero-badge { padding: 0 10px; }
+          .hb-num { font-size: 1.2rem; }
+          .hero-ctas { flex-direction: column; align-items: center; gap: 12px; }
+          .hero-cta-primary, .hero-cta-secondary { width: 100%; max-width: 260px; justify-content: center; }
           .hero-specialty-wrap { flex-direction: column; gap: 6px; }
           .hero-specialty-word { text-align: center; }
+          .gallery-section { padding-bottom: 100px; }
         }
       `}</style>
     </main>

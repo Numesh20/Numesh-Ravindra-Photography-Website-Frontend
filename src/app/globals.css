@@ -1621,3 +1621,28 @@ html {
   touch-action: manipulation;
 }
 
+/* ── Mobile bottom padding — prevents content hiding behind MobileActionBar ── */
+@media (max-width: 768px) {
+  /* All page footers get extra bottom space */
+  footer { padding-bottom: calc(80px + env(safe-area-inset-bottom)) !important; }
+
+  /* Main pages get bottom clearance */
+  main > section:last-child,
+  main > div:last-child {
+    padding-bottom: calc(80px + env(safe-area-inset-bottom));
+  }
+
+  /* Larger touch targets for all buttons and links */
+  button, a {
+    min-height: 44px;
+  }
+
+  /* Better spacing for sections on mobile */
+  .section-title { letter-spacing: -0.01em !important; }
+}
+
+/* ── Prevent text overflow on tiny screens ── */
+@media (max-width: 380px) {
+  .section-title { font-size: 1.6rem !important; }
+  .section-desc { font-size: 0.85rem !important; }
+}
