@@ -1,4 +1,4 @@
-import { POSTS } from "../../posts";
+import { POSTS } from "../posts";
 import BlogPostClient from "./BlogPostClient";
 
 export async function generateStaticParams() {

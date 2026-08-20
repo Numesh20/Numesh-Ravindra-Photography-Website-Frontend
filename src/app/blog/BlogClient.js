@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { POSTS } from "../posts";
+import { POSTS } from "./posts";
 
 const CATEGORY_COLORS = {
   Wedding: "#d4af37",
