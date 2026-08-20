@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import StatsSection from "./components/StatsSection";
 import Testimonials from "./components/Testimonials";
+import FAQSection from "./components/FAQSection";
 
 const ALBUMS = [
   {
@@ -224,6 +225,9 @@ export default function HomeClient() {
 
       {/* ── Testimonials ── */}
       <Testimonials />
+
+      {/* ── FAQ ── */}
+      <FAQSection />
 
       <style jsx>{`
         /* ── Hero ── */

@@ -149,6 +149,20 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              { "@type": "Question", "name": "How far in advance should I book a photographer in Sri Lanka?", "acceptedAnswer": { "@type": "Answer", "text": "For weddings, book at least 3–6 months in advance. For portrait and event sessions, 2–4 weeks notice is usually enough." } },
+              { "@type": "Question", "name": "What areas does Numesh Ravindra Photography cover?", "acceptedAnswer": { "@type": "Answer", "text": "Based in Mawanella, available island-wide across Sri Lanka including Colombo, Kandy, Galle, Nuwara Eliya and more." } },
+              { "@type": "Question", "name": "How long does it take to receive wedding photos in Sri Lanka?", "acceptedAnswer": { "@type": "Answer", "text": "Wedding highlights within 3 days. Full edited gallery within 4–6 weeks. Portrait sessions within 1–2 weeks." } },
+              { "@type": "Question", "name": "What is the payment process for photography sessions?", "acceptedAnswer": { "@type": "Answer", "text": "A 30% advance deposit is required to confirm your date. The remaining balance is due on the day of the shoot." } },
+              { "@type": "Question", "name": "How many photos will I receive?", "acceptedAnswer": { "@type": "Answer", "text": "Portrait sessions include 30–60 edited images. Wedding packages include 300–600+ edited photos depending on the package." } }
+            ]
+          }) }}
+        />
         <SplashScreen />
         <Navbar />
         {children}
