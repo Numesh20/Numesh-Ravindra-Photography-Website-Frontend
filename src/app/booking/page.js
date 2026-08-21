@@ -1,7 +1,7 @@
 import BookingClient from "./BookingClient";
 
 export const metadata = {
-  title: "Book a Session | Numesh Ravindra Photography",
+  title: "Book a Session",
   description: "Book your photography session with Numesh Ravindra. Wedding, portrait, event, and outdoor photography available island-wide across Sri Lanka.",
   alternates: {
     canonical: "https://www.numeshravindra.me/booking",

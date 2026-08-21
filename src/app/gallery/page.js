@@ -1,7 +1,7 @@
 import GalleryClient from "./GalleryClient";
 
 export const metadata = {
-  title: "Photography Albums & Gallery | Numesh Ravindra Photography",
+  title: "Photography Albums & Gallery",
   description: "Browse through Numesh Ravindra's photography albums. Capturing stunning weddings, beautiful portraits, professional events, and breathtaking wildlife in Sri Lanka.",
   keywords: [
     "Photography gallery Sri Lanka",

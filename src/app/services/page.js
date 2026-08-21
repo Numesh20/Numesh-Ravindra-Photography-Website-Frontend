@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Photography Services & Pricing Packages | Numesh Ravindra Photography",
+  title: "Photography Services & Pricing Packages",
   description: "Explore photography service pricing packages in Sri Lanka. Tailored options for weddings, professional event coverage, outdoor/studio portrait sessions, and wildlife prints.",
   keywords: [
     "Wedding photography packages Sri Lanka",

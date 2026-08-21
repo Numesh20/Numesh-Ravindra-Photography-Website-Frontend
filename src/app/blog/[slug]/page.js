@@ -6,7 +6,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const post = POSTS.find((p) => p.slug === params.slug);
+  const { slug } = await params;
+  const post = POSTS.find((p) => p.slug === slug);
   if (!post) return { title: "Article Not Found" };
 
   return {
@@ -40,6 +41,7 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function BlogPostPage({ params }) {
-  return <BlogPostClient slug={params.slug} />;
+export default async function BlogPostPage({ params }) {
+  const { slug } = await params;
+  return <BlogPostClient slug={slug} />;
 }

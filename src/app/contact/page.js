@@ -40,7 +40,7 @@ const FAQ_SCHEMA = {
 };
 
 export const metadata = {
-  title: "Contact & Book a Session | Numesh Ravindra Photography",
+  title: "Contact & Book a Session",
   description: "Get in touch with Numesh Ravindra to book your wedding, portrait, wildlife, or event photography session in Sri Lanka. Mawanella-based, available island-wide. Responds within 24 hours.",
   keywords: [
     "Book photographer Sri Lanka",
@@ -54,7 +54,7 @@ export const metadata = {
     canonical: "https://www.numeshravindra.me/contact",
   },
   openGraph: {
-    title: "Contact & Book a Session | Numesh Ravindra Photography",
+    title: "Contact & Book a Session",
     description: "Get in touch with Numesh Ravindra to book your wedding, portrait, wildlife, or event photography session in Sri Lanka. Responds within 24 hours.",
     url: "https://www.numeshravindra.me/contact",
     siteName: "Numesh Ravindra Photography",
@@ -71,7 +71,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact & Book a Session | Numesh Ravindra Photography",
+    title: "Contact & Book a Session",
     description: "Book a wedding, portrait, event, or wildlife photography session in Sri Lanka. Responds within 24 hours.",
     images: ["https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&h=630&q=80"],
   },
