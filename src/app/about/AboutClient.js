@@ -77,14 +77,28 @@ const GEAR = [
   {
     icon: (
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M12 2a3 3 0 0 0-3 3v1.17A7.99 7.99 0 0 0 4 13.92V16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2.08a7.99 7.99 0 0 0-5-7.75V5a3 3 0 0 0-3-3z"/>
+        <path d="M5 9l-3 3"/>
+        <path d="M19 9l3 3"/>
+        <circle cx="12" cy="14" r="2"/>
+      </svg>
+    ),
+    category: "Aerial & Drone",
+    items: [
+      "DJI Mavic 3 Pro — 4K/5.1K Hasselblad Aerial Drone",
+      "Triple-Camera System & 3-Axis Gimbal Stabilization"
+    ]
+  },
+  {
+    icon: (
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
       </svg>
     ),
     category: "Lighting & Support",
     items: [
       "Profoto B10X Location Lighting",
-      "Gitzo Carbon Fibre Tripod",
-      "DJI Mavic 3 Pro — Aerial Drone"
+      "Gitzo Carbon Fibre Tripod"
     ]
   }
 ];
@@ -458,8 +472,8 @@ export default function AboutClient() {
 
         /* ── Gear ── */
         .ap-gear-section { padding: 80px 4%; background: rgba(255,255,255,0.01); border-top: 1px solid var(--border-color); }
-        .ap-gear-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1100px; margin: 0 auto; }
-        .ap-gear-card { background: var(--surface-color); border: 1px solid var(--border-color); border-radius: 20px; padding: 32px 28px; transition: all 0.3s ease; }
+        .ap-gear-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1200px; margin: 0 auto; }
+        .ap-gear-card { background: var(--surface-color); border: 1px solid var(--border-color); border-radius: 20px; padding: 28px 22px; transition: all 0.3s ease; }
         .ap-gear-card:hover { border-color: rgba(212,175,55,0.3); transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.3); }
         .ap-gear-icon { width: 52px; height: 52px; border-radius: 14px; background: rgba(212,175,55,0.08); border: 1px solid rgba(212,175,55,0.15); display: flex; align-items: center; justify-content: center; color: var(--accent); margin-bottom: 20px; }
         .ap-gear-cat { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); font-weight: 700; margin-bottom: 14px; }
@@ -507,11 +521,12 @@ export default function AboutClient() {
           .ap-bio-grid { grid-template-columns: 1fr; gap: 40px; }
           .ap-photo-wrap { position: static; max-width: 400px; margin: 0 auto; }
           .ap-spec-grid { grid-template-columns: repeat(2, 1fr); }
-          .ap-gear-grid { grid-template-columns: 1fr; }
+          .ap-gear-grid { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 640px) {
           .ap-hero-title { font-size: 3rem; }
           .ap-spec-grid { grid-template-columns: 1fr; }
+          .ap-gear-grid { grid-template-columns: 1fr; }
           .ap-timeline-item { grid-template-columns: 60px 30px 1fr; gap: 0 12px; }
           .ap-cta-banner { padding: 40px 24px; }
           .ap-cta-banner h2 { font-size: 1.6rem; }

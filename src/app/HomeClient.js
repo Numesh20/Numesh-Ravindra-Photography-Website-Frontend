@@ -11,7 +11,7 @@ const ALBUMS = [
   {
     slug: "anu-karunathilaka",
     title: "Anu Karunathilaka",
-    description: "A beautiful romantic wedding photography collection.",
+    description: "A joyful 22nd birthday and outdoor portrait photography session.",
     cover: "/gallery/portraits/Anu%20Karunathilaka/IMG_1.jpg",
     count: 26,
   },

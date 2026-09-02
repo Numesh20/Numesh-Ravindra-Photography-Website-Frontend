@@ -2,8 +2,8 @@ import AlbumClient from "./AlbumClient";
 
 const ALBUM_META = {
   "anu-karunathilaka": {
-    title: "Anu Karunathilaka | Wedding Album",
-    description: "View the romantic wedding photography collection of Anu Karunathilaka captured by Numesh Ravindra in Sri Lanka.",
+    title: "Anu Karunathilaka | Birthday & Portrait Album",
+    description: "View the joyful 22nd birthday and portrait photography collection of Anu Karunathilaka captured by Numesh Ravindra in Sri Lanka.",
     coverPath: "/gallery/portraits/Anu%20Karunathilaka/IMG_1.jpg"
   },
   "manavi-photo-shoot": {
@@ -20,6 +20,11 @@ const ALBUM_META = {
     title: "Amandi Rathnayake | Curated Album",
     description: "Check out the beautifully curated photography collection of Amandi Rathnayake by Numesh Ravindra.",
     coverPath: "/gallery/portraits/amandi%20Edit/10.jpg"
+  },
+  "sathya-birthday-shoot": {
+    title: "Sathya Birthday Shoot | Event Album",
+    description: "Explore the vibrant and joyful birthday photography collection of Sathya captured by Numesh Ravindra in Sri Lanka.",
+    coverPath: "/gallery/portraits/Sathya%20Birthday%20shoot/1%20(1).jpg"
   }
 };
 
@@ -38,7 +43,7 @@ export async function generateMetadata({ params }) {
     : "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&h=630&q=80";
 
   return {
-    title: `${meta.title} | Numesh Ravindra Photography`,
+    title: meta.title,
     description: meta.description,
     alternates: {
       canonical: `${BASE_URL}/gallery/${albumSlug}`,

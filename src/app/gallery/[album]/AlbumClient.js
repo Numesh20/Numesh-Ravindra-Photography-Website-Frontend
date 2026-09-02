@@ -8,7 +8,7 @@ const ALBUM_DATA = {
   "anu-karunathilaka": {
     title: "Anu Karunathilaka",
     folder: "Anu Karunathilaka",
-    description: "A beautiful romantic wedding photography collection.",
+    description: "A joyful 22nd birthday and outdoor portrait photography session.",
     icon: "",
     photos: [
       { id: 1, filename: "IMG_1.jpg" },
