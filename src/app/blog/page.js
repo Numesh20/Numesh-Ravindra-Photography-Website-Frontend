@@ -1,7 +1,7 @@
 import BlogClient from "./BlogClient";
 
 export const metadata = {
-  title: "Photography Blog | Tips, Guides & Insights — Numesh Ravindra Photography",
+  title: "Photography Blog | Tips, Guides & Insights",
   description: "Photography tips, wedding venue guides, portrait advice, and wildlife photography stories from professional photographer Numesh Ravindra in Sri Lanka.",
   keywords: [
     "photography blog Sri Lanka",
