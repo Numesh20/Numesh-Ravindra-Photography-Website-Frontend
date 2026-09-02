@@ -2,6 +2,60 @@
 
 export const POSTS = [
   {
+    slug: "top-pre-wedding-photoshoot-locations-kandy-sri-lanka",
+    title: "Top Pre-Wedding Photoshoot Locations in Kandy & Central Sri Lanka",
+    excerpt: "Looking for the dream setting for your couple photoshoot? Explore the most scenic, historic, and romantic pre-wedding photoshoot locations across Kandy and the Central Province.",
+    category: "Pre-Wedding",
+    date: "September 2, 2025",
+    readTime: "7 min read",
+    cover: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1200&q=80",
+    content: `
+A pre-wedding photoshoot is your opportunity to celebrate your unique connection before the busy excitement of the wedding day. For couples in Sri Lanka, the Central Province — with its misty hill country, regal architecture, and tranquil nature reserves — provides some of the most enchanting backdrops in South Asia.
+
+As a photographer based in Mawanella, I regularly capture love stories across Kandy and neighboring districts. Here are the top pre-wedding photoshoot locations you should consider for your session.
+
+## 1. Royal Botanical Gardens, Peradeniya
+
+Covering 147 acres, the Peradeniya Gardens offer unmatched botanical diversity and classic romance. The towering Royal Palm Avenue, giant Javan fig tree, and suspension bridge create distinct visual atmospheres within a single location.
+
+**Best for:** Elegant gowns, vintage editorial themes, and natural greenery with soft diffused light under the canopy.
+
+## 2. Ambuluwawa Biodiversity Complex, Gampola
+
+For couples seeking dramatic, cinematic, and unforgettable photographs, the spiral tower of Ambuluwawa is legendary. Rising high above the surrounding peaks, the 360-degree panoramic vista across the mountain ranges offers breathtaking wide-angle compositions, especially when low mist rolls across the valleys.
+
+**Best for:** Epic drone shots, adventurous couples, and dramatic high-altitude portraits.
+
+## 3. Hanthana Mountain Range & Tea Estates
+
+The winding roads of Hanthana feature emerald green tea plantations, gentle slopes, and panoramic viewpoints overlooking Kandy city. The soft morning mist and warm golden hour light create an intimate, fairytale atmosphere.
+
+**Best for:** Casual romantic shoots, traditional attire, and golden sunset silhouettes.
+
+## 4. Kandy Lake & Historic Heritage Quarter
+
+The perimeter of Kandy Lake, against the backdrop of the sacred Temple of the Tooth and surrounding wooded hills, combines cultural heritage with classic Sri Lankan elegance. A session here during early morning offers calm waters and quiet, distraction-free reflections.
+
+**Best for:** Traditional Kandyan attire, cultural pre-shoots, and serene waterfront portraits.
+
+## 5. Alagalla Mountain Foothills & Mawanella Valley
+
+Located just outside Mawanella, the foothill valleys beneath the imposing Alagalla rock provide rugged boulders, peaceful streams, and authentic countryside charm. This is a quieter alternative where you can shoot without crowds or heavy permit restrictions.
+
+**Best for:** Rustic nature sessions, peaceful couple moments, and authentic countryside landscapes.
+
+## Pro Tips for Your Pre-Wedding Session
+
+- **Optimal Timing:** Schedule your shoot during early morning (6:30 AM – 8:30 AM) or late afternoon (4:30 PM – 6:00 PM) for the softest, most flattering light.
+- **Wardrobe Harmony:** Choose complementary color palettes (such as cream, warm pastels, or royal tones) that stand out against lush green vegetation without clashing.
+- **Stay Relaxed:** The finest portraits capture spontaneous laughter, quiet embraces, and authentic joy rather than rigid, stiff poses.
+
+## Book Your Pre-Wedding Photoshoot
+
+Ready to plan your dream pre-wedding session? I travel island-wide across Sri Lanka to craft timeless memories for couples. [Book your session today](/booking) or [contact me directly](/contact) to check available dates.
+    `.trim(),
+  },
+  {
     slug: "best-wedding-venues-sri-lanka-photography",
     title: "Best Wedding Venues in Sri Lanka for Photography",
     excerpt: "From colonial heritage hotels in Kandy to beachfront resorts in Galle — discover the most photogenic wedding venues across Sri Lanka.",

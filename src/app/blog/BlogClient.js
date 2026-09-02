@@ -9,6 +9,7 @@ const CATEGORY_COLORS = {
   Portrait: "#a78bfa",
   Wildlife: "#34d399",
   Events: "#60a5fa",
+  "Pre-Wedding": "#f43f5e",
 };
 
 export default function BlogClient() {

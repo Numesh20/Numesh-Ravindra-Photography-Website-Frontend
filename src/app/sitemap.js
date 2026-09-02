@@ -30,6 +30,7 @@ export default async function sitemap() {
   }));
 
   const blogPosts = [
+    'top-pre-wedding-photoshoot-locations-kandy-sri-lanka',
     'best-wedding-venues-sri-lanka-photography',
     'how-to-prepare-portrait-photography-session',
     'wildlife-photography-sri-lanka-guide',
