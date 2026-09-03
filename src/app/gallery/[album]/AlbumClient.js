@@ -288,7 +288,17 @@ export default function AlbumClient({ albumSlug }) {
                 style={{ objectFit: 'contain' }}
                 className="lightbox-img"
                 priority
+                onContextMenu={(e) => e.preventDefault()}
+                draggable={false}
               />
+              {/* Watermark */}
+              <div className="lightbox-watermark" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ flexShrink: 0 }}>
+                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                  <circle cx="12" cy="13" r="4"/>
+                </svg>
+                <span>numeshravindra.me</span>
+              </div>
             </div>
             <div className="lightbox-info-section">
               <div className="lightbox-meta">
@@ -369,6 +379,28 @@ export default function AlbumClient({ albumSlug }) {
           color: rgba(255,255,255,0.5);
           font-size: 0.75rem;
           font-weight: 600;
+        }
+
+        /* Watermark */
+        .lightbox-watermark {
+          position: absolute;
+          bottom: 14px;
+          right: 14px;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          background: rgba(8, 8, 10, 0.55);
+          backdrop-filter: blur(8px);
+          border: 1px solid rgba(255,255,255,0.1);
+          color: rgba(255,255,255,0.65);
+          padding: 5px 12px 5px 10px;
+          border-radius: 50px;
+          font-size: 0.72rem;
+          font-weight: 600;
+          letter-spacing: 0.8px;
+          pointer-events: none;
+          user-select: none;
+          z-index: 5;
         }
       `}</style>
     </main>

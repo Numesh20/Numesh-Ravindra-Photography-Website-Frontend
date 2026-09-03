@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import emailjs from "@emailjs/browser";
 
@@ -61,6 +62,17 @@ export default function BookingClient() {
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
+
+  const searchParams = useSearchParams();
+
+  // Pre-fill date from URL query param (e.g. /booking?date=2025-12-25)
+  useEffect(() => {
+    const urlDate = searchParams.get('date');
+    if (urlDate) {
+      setForm((prev) => ({ ...prev, date: urlDate }));
+    }
+  }, [searchParams]);
+
 
   const service = SERVICES.find((s) => s.id === selectedService);
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import StatsSection from "./components/StatsSection";
@@ -51,6 +52,18 @@ const SPECIALTIES = ["Weddings", "Wildlife", "Portraits", "Events"];
 export default function HomeClient() {
   const [currentWord, setCurrentWord] = useState(0);
   const [visible, setVisible] = useState(true);
+  const [selectedDate, setSelectedDate] = useState("");
+  const router = useRouter();
+
+  const todayStr = new Date().toISOString().split('T')[0];
+
+  const handleCheckDate = () => {
+    if (selectedDate) {
+      router.push(`/booking?date=${selectedDate}`);
+    } else {
+      router.push('/booking');
+    }
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -124,6 +137,32 @@ export default function HomeClient() {
             <Link href="/contact" className="hero-cta hero-cta-secondary">
               Book a Session
             </Link>
+          </div>
+
+          {/* ── Date Availability Widget ── */}
+          <div className="hero-date-widget">
+            <div className="hdw-label">Check date availability</div>
+            <div className="hdw-row">
+              <div className="hdw-input-wrap">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="hdw-cal-icon">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                <input
+                  type="date"
+                  className="hdw-input"
+                  value={selectedDate}
+                  min={todayStr}
+                  onChange={(e) => setSelectedDate(e.target.value)}
+                  aria-label="Select a date to check availability"
+                />
+              </div>
+              <button className="hdw-btn" onClick={handleCheckDate}>
+                {selectedDate ? "Check Now" : "Book a Date"}
+              </button>
+            </div>
           </div>
 
           {/* Floating Stat Badges */}
@@ -425,6 +464,77 @@ export default function HomeClient() {
           color: var(--accent) !important;
           transform: translateY(-3px) !important;
           box-shadow: 0 12px 30px rgba(0,0,0,0.3) !important;
+        }
+
+        /* Date Availability Widget */
+        .hero-date-widget {
+          margin-bottom: 40px;
+        }
+        .hdw-label {
+          font-size: 0.7rem;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          color: rgba(255,255,255,0.45);
+          font-weight: 600;
+          margin-bottom: 10px;
+        }
+        .hdw-row {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+        .hdw-input-wrap {
+          position: relative;
+          display: flex;
+          align-items: center;
+        }
+        .hdw-cal-icon {
+          position: absolute;
+          left: 14px;
+          color: var(--accent);
+          pointer-events: none;
+          z-index: 2;
+        }
+        .hdw-input {
+          background: rgba(255,255,255,0.06);
+          border: 1px solid rgba(255,255,255,0.15);
+          color: #fff;
+          padding: 12px 18px 12px 38px;
+          border-radius: 50px;
+          font-size: 0.82rem;
+          font-weight: 500;
+          letter-spacing: 0.5px;
+          outline: none;
+          transition: all 0.25s ease;
+          backdrop-filter: blur(8px);
+          cursor: pointer;
+          min-width: 170px;
+          color-scheme: dark;
+        }
+        .hdw-input:focus {
+          border-color: var(--accent);
+          background: rgba(212,175,55,0.08);
+          box-shadow: 0 0 0 3px rgba(212,175,55,0.12);
+        }
+        .hdw-btn {
+          background: var(--accent);
+          color: #000;
+          border: none;
+          padding: 12px 24px;
+          border-radius: 50px;
+          font-size: 0.8rem;
+          font-weight: 800;
+          letter-spacing: 1.5px;
+          text-transform: uppercase;
+          cursor: pointer;
+          transition: all 0.25s ease;
+          white-space: nowrap;
+        }
+        .hdw-btn:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 8px 22px rgba(212,175,55,0.4);
         }
 
         /* Stat Badges */

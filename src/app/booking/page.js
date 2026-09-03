@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import BookingClient from "./BookingClient";
 
 export const metadata = {
@@ -25,5 +26,9 @@ export const metadata = {
 };
 
 export default function BookingPage() {
-  return <BookingClient />;
+  return (
+    <Suspense fallback={<div style={{ minHeight: "100vh", background: "#08080a" }} />}>
+      <BookingClient />
+    </Suspense>
+  );
 }
