@@ -8,6 +8,7 @@ import StatsSection from "./components/StatsSection";
 import Testimonials from "./components/Testimonials";
 import FAQSection from "./components/FAQSection";
 import InstagramSection from "./components/InstagramSection";
+import BeforeAfterSection from "./components/BeforeAfterSection";
 
 const ALBUMS = [
   {
@@ -254,6 +255,9 @@ export default function HomeClient() {
           </Link>
         </div>
       </section>
+
+      {/* ── Before & After Editing Slider ── */}
+      <BeforeAfterSection />
 
       {/* ── Testimonials ── */}
       <Testimonials />
