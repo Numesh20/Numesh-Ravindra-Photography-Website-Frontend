@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import emailjs from "@emailjs/browser";
+import AvailabilityCalendar from "../components/AvailabilityCalendar";
 
 const SERVICE_ID  = "service_mqgvptj";
 const TEMPLATE_ID = "template_xfytr0h";
@@ -161,6 +162,32 @@ export default function BookingClient() {
             Fill in the form below and I'll confirm your booking within 24 hours.
           </p>
         </div>
+      </section>
+
+      {/* ── Availability Calendar ── */}
+      <section style={{ padding: '40px 4% 0', maxWidth: '900px', margin: '0 auto' }}>
+        <div style={{ textAlign: 'center', marginBottom: '24px' }}>
+          <span style={{
+            display: 'inline-block',
+            background: 'rgba(212,175,55,0.1)',
+            border: '1px solid rgba(212,175,55,0.25)',
+            color: 'var(--accent)',
+            padding: '5px 16px',
+            borderRadius: '50px',
+            fontSize: '0.75rem',
+            fontWeight: 700,
+            letterSpacing: '1px',
+            textTransform: 'uppercase',
+            marginBottom: '10px',
+          }}>Availability</span>
+          <h2 style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--text-main)', marginBottom: '6px' }}>
+            Check Available Dates
+          </h2>
+          <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem' }}>
+            Click any green date to pre-fill it in the booking form below.
+          </p>
+        </div>
+        <AvailabilityCalendar compact />
       </section>
 
       {/* ── Stepper ── */}
