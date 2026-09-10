@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import PriceCalculator from "../components/PriceCalculator";
 
 const WEDDING_PACKAGES = [
   {
@@ -299,6 +300,9 @@ export default function ServicesClient() {
           </div>
         </div>
       </section>
+
+      {/* ── Price Calculator ── */}
+      <PriceCalculator />
 
       {/* ── CTA Banner ── */}
       <section className="sp-cta animate-fade-in">
