@@ -6,24 +6,18 @@ import Image from "next/image";
 const PAIRS = [
   {
     label: "Portrait Session",
-    before: "/gallery/portraits/Savindi%20Edit/IMG_5277%20-%20Copy.jpg",
-    after: "/gallery/portraits/Savindi%20Edit/IMG_5089.jpg",
-    beforeAlt: "Raw unedited portrait photo",
-    afterAlt: "Professionally edited portrait by Numesh Ravindra",
+    photo: "/gallery/portraits/Savindi%20Edit/IMG_5089.jpg",
+    alt: "Portrait photography by Numesh Ravindra",
   },
   {
     label: "Birthday Shoot",
-    before: "/gallery/portraits/Sathya%20Birthday%20shoot/1%20(1).jpg",
-    after: "/gallery/portraits/Anu%20Karunathilaka/IMG_1.jpg",
-    beforeAlt: "Raw unedited event photo",
-    afterAlt: "Colour graded edited photo by Numesh Ravindra",
+    photo: "/gallery/portraits/Anu%20Karunathilaka/IMG_1.jpg",
+    alt: "Birthday shoot photography by Numesh Ravindra",
   },
   {
     label: "Outdoor Portrait",
-    before: "/gallery/portraits/amandi%20Edit/10.jpg",
-    after: "/gallery/portraits/Manavi%20photo%20shoot/Cover.jpg",
-    beforeAlt: "Raw outdoor photo",
-    afterAlt: "Final edited outdoor portrait by Numesh Ravindra",
+    photo: "/gallery/portraits/Manavi%20photo%20shoot/Cover.jpg",
+    alt: "Outdoor portrait photography by Numesh Ravindra",
   },
 ];
 
@@ -69,9 +63,9 @@ function Slider({ pair }) {
       onTouchStart={(e) => { updatePosition(e.touches[0].clientX); onTouchStart(); }}
       style={{ cursor: dragging ? 'grabbing' : 'ew-resize' }}
     >
-      {/* AFTER (full base layer) */}
+      {/* AFTER — full colour edited (base layer) */}
       <div className="bas-after-wrap">
-        <Image src={pair.after} alt={pair.afterAlt} fill style={{ objectFit: 'cover' }} quality={85} />
+        <Image src={pair.photo} alt={pair.alt} fill style={{ objectFit: 'cover' }} quality={85} />
         <div className="bas-after-label">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
@@ -81,9 +75,18 @@ function Slider({ pair }) {
         </div>
       </div>
 
-      {/* BEFORE (clipped left layer) */}
+      {/* BEFORE — same photo with CSS filter to simulate RAW (clipped to left) */}
       <div className="bas-before-wrap" style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}>
-        <Image src={pair.before} alt={pair.beforeAlt} fill style={{ objectFit: 'cover' }} quality={85} />
+        <Image
+          src={pair.photo}
+          alt={pair.alt}
+          fill
+          style={{
+            objectFit: 'cover',
+            filter: 'saturate(0.25) contrast(0.75) brightness(1.1) sepia(0.15)',
+          }}
+          quality={85}
+        />
         <div className="bas-before-label">RAW</div>
       </div>
 
