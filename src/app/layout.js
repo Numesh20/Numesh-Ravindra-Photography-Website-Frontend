@@ -51,7 +51,7 @@ export const metadata = {
     title: 'Numesh Ravindra Photography | Wedding & Portrait Photographer Sri Lanka',
     description: 'Professional photographer in Mawanella, Sri Lanka. Specializing in weddings, portraits, wildlife & events. Available island-wide. Book now!',
     images: [{
-      url: '/og-image.jpg',
+      url: 'https://www.numeshravindra.me/opengraph-image',
       width: 1200,
       height: 630,
       alt: 'Numesh Ravindra Photography — Professional Photographer Sri Lanka',
@@ -61,7 +61,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Numesh Ravindra Photography | Sri Lanka',
     description: 'Professional wedding, portrait & wildlife photographer. Based in Mawanella, available island-wide across Sri Lanka.',
-    images: ['/og-image.jpg'],
+    images: ['https://www.numeshravindra.me/opengraph-image'],
   },
   alternates: {
     canonical: 'https://www.numeshravindra.me',
