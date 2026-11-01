@@ -110,3 +110,4 @@ console.log('Next step: Convert og-image.svg to og-image.jpg using:');
 console.log('  - Sharp: npm install sharp && node scripts/convert-og.js');
 console.log('  - Or open public/og-image.svg in a browser and screenshot it');
 console.log('  - Or use https://cloudconvert.com/svg-to-jpg');
+
